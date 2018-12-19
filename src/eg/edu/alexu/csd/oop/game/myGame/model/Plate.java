@@ -1,30 +1,16 @@
 package eg.edu.alexu.csd.oop.game.myGame.model;
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 
-public class Clown implements GameObject {
+public abstract class Plate implements GameObject {
 	private int x;
 	private int y;
 	private boolean visible;
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
 	
-	public Clown(int x, int y, String imagePath) {
-		this.x = x;
-		this.y = y;
-		this.visible = true;
-		try {
-			spriteImages[0] = ImageIO.read(getClass().getResourceAsStream(imagePath));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
 	@Override
 	public int getX() {
 		return x;
