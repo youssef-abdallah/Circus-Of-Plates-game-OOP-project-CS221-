@@ -1,4 +1,4 @@
-package eg.edu.alexu.csd.oop.game.sample.world;
+package eg.edu.alexu.csd.oop.game.myGame.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package eg.edu.alexu.csd.oop.game.sample.object;
+package eg.edu.alexu.csd.oop.game.myGame.model;
 
 import java.awt.image.BufferedImage;
 
