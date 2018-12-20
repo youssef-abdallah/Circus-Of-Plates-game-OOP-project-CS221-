@@ -69,7 +69,7 @@ public class CircusOfPlates implements World {
 	@Override
 	public boolean refresh() {
 		if (j % 100 == 0) {
-			Plate plate = new Plate(i * 100 + 110, 0);
+			Plate plate = new Plate((int) Math.ceil(Math.random() * width), 0);
 			i++;
 			movable.add(plate);
 		}
