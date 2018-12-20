@@ -1,19 +1,24 @@
 package eg.edu.alexu.csd.oop.game.myGame.model.factory;
 
-import java.awt.Point;
 import eg.edu.alexu.csd.oop.game.myGame.model.Plate;
+import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 
 public class PlatesFactory {
 	private static PlatesFactory uniqueInstance = new PlatesFactory();
-	public static PlatesFactory getInstance() {
+	private static int width;
+	public static PlatesFactory getInstance(int backgroundWidth) {
+		width = backgroundWidth;
 		return uniqueInstance;
 	}
 	private PlatesFactory() {
 		
 	}
 	
-	public Plate makePlate(String plateShape, 
-			Point position) {
+	public Shape  makeShape(String shapeName) {
+		if ("plate".equalsIgnoreCase(shapeName)) {
+			Shape plate = new Plate((int) Math.ceil(Math.random() * width), 0);
+			return plate;
+		}
 		return null;
 	}
 }

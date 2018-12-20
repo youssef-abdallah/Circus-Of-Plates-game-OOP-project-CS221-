@@ -5,47 +5,43 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import eg.edu.alexu.csd.oop.game.GameObject;
-
-public class Plate implements GameObject {
-	private int x;
-	private int y;
-	private boolean visible;
+public class Plate extends Shape {
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
 	private int type;
 
 	public Plate(int x, int y) {
-		this.x = x;
-		this.y = y;
+		super.setX(x);
+		super.setY(y);
 		type = (int) Math.ceil(Math.random() * 2);
 		try {
-			spriteImages[0] = ImageIO.read(getClass().getResourceAsStream("/images" + type + ".png"));
+			spriteImages[0] = ImageIO.read(super.getClass().getResourceAsStream("/images" + type + ".png"));
+			super.setSpriteImages(spriteImages);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		visible = true;
+		super.setVisible(true);
 	}
 
 	@Override
 	public int getX() {
-		return x;
+		return super.getX();
 	}
 
 	@Override
 	public void setX(int x) {
-		this.x = x;
+		super.setX(x);
 
 	}
 
 	@Override
 	public int getY() {
-		return y;
+		return super.getY();
 	}
 
 	@Override
 	public void setY(int y) {
-		this.y = y;
+		super.setY(y);
 	}
 
 	@Override
@@ -60,16 +56,16 @@ public class Plate implements GameObject {
 
 	@Override
 	public boolean isVisible() {
-		return visible;
+		return super.isVisible();
 	}
 	
 	public void setVisible(boolean visible) {
-		this.visible = visible;
+		super.setVisible(visible);
 	}
 
 	@Override
 	public BufferedImage[] getSpriteImages() {
-		return spriteImages;
+		return super.getSpriteImages();
 	}
 
 	public int getType() {

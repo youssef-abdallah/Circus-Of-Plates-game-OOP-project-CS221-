@@ -15,8 +15,8 @@ public class Clown implements GameObject, Subject {
 	private boolean visible;
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
-	private Stack<Plate> rStack = new Stack<Plate>();
-	private Stack<Plate> lStack = new Stack<Plate>();
+	private Stack<Shape> rStack = new Stack<Shape>();
+	private Stack<Shape> lStack = new Stack<Shape>();
 	private ArrayList<Observable> observers = new ArrayList<Observable>();
 
 	public Clown(int x, int y, String imagePath) {
@@ -71,7 +71,7 @@ public class Clown implements GameObject, Subject {
 		return spriteImages;
 	}
 
-	public void addToStack(String stack, Plate plate) {
+	public void addToStack(String stack, Shape plate) {
 		if (stack.equals("lStack")) {
 			lStack.push(plate);
 			this.notifyObservers();
@@ -97,11 +97,11 @@ public class Clown implements GameObject, Subject {
 		}
 	}
 
-	public Stack<Plate> getLeftStack() {
+	public Stack<Shape> getLeftStack() {
 		return lStack;
 	}
 
-	public Stack<Plate> getRightStack() {
+	public Stack<Shape> getRightStack() {
 		return rStack;
 	}
 

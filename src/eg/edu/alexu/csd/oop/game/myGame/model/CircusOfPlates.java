@@ -5,6 +5,7 @@ import java.util.List;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
+import eg.edu.alexu.csd.oop.game.myGame.model.factory.PlatesFactory;
 
 public class CircusOfPlates implements World {
 
@@ -16,6 +17,7 @@ public class CircusOfPlates implements World {
 	private Clown clown;
 	private int speed;
 	private int score=0;
+	private PlatesFactory platesFactory;
 	int i;
 	int j = 0;
 
@@ -29,6 +31,7 @@ public class CircusOfPlates implements World {
 		Observable observer= new PlateObserver();
 		clown.addObserver(observer);
 		speed = 10;
+		platesFactory = PlatesFactory.getInstance(width);
 	}
 
 	@Override
@@ -69,7 +72,7 @@ public class CircusOfPlates implements World {
 	@Override
 	public boolean refresh() {
 		if (j % 100 == 0) {
-			Plate plate = new Plate((int) Math.ceil(Math.random() * width), 0);
+			Shape plate = platesFactory.makeShape("plate");
 			i++;
 			movable.add(plate);
 		}
@@ -80,7 +83,7 @@ public class CircusOfPlates implements World {
 				o.setX(clown.getTopLeft().getX());
 				controlable.add(o);
 				movable.remove(o);
-				clown.addToStack("lStack", (Plate) o);
+				clown.addToStack("lStack", (Shape) o);
 			}
 			int x;
 			if (clown.getTopLeft().getX() == clown.getTopRight().getX()) {
@@ -95,11 +98,11 @@ public class CircusOfPlates implements World {
 				clown.addToStack("rStack", (Plate) o);
 			}
 			for(int i = 0; i < clown.getLeftStack().size(); i++) {
-				Plate p = clown.getLeftStack().get(i);
+				Shape p = clown.getLeftStack().get(i);
 				p.setY(clown.getY() + ((i+1)* -p.getHeight()) );
 			}
 			for(int i = 0; i < clown.getRightStack().size(); i++) {
-				Plate p = clown.getRightStack().get(i);
+				Shape p = clown.getRightStack().get(i);
 				p.setY(clown.getY() + ((i+1)* -p.getHeight()) );
 			}
 			int before=controlable.size();
@@ -138,7 +141,7 @@ public class CircusOfPlates implements World {
 
 	@Override
 	public int getControlSpeed() {
-		return 20;
+		return speed;
 	}
 
 }

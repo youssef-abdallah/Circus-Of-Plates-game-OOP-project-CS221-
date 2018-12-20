@@ -6,12 +6,12 @@ public class Easy implements Difficulty {
 
 	CircusOfPlates world;
 
-	Easy(CircusOfPlates world) {
+	public Easy(CircusOfPlates world) {
 		this.world = world;
 	}
 
 	@Override
 	public void setDifficulty() {
-
+		world.setSpeed(5);
 	}
 }

@@ -6,7 +6,7 @@ public class Moderate implements Difficulty {
 
 	CircusOfPlates world;
 
-	Moderate(CircusOfPlates world) {
+	public Moderate(CircusOfPlates world) {
 		this.world = world;
 	}
 

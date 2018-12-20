@@ -6,12 +6,12 @@ public class Hard implements Difficulty {
 
 	CircusOfPlates world;
 
-	Hard(CircusOfPlates world) {
+	public Hard(CircusOfPlates world) {
 		this.world = world;
 	}
 
 	@Override
 	public void setDifficulty() {
-
+		world.setSpeed(2);
 	}
 }
