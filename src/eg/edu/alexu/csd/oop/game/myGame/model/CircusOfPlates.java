@@ -5,7 +5,8 @@ import java.util.List;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
-import eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory;
+import eg.edu.alexu.csd.oop.game.myGame.model.iterator.Iterator;
+import eg.edu.alexu.csd.oop.game.myGame.model.iterator.ShapesCollection;
 import eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool;
 
 public class CircusOfPlates implements World {
@@ -20,6 +21,7 @@ public class CircusOfPlates implements World {
 	private int controlSpeed=15;
 	private int score=0;
 	private ShapesPool shapesPool;
+	private ShapesCollection shapesCollection;
 	int i;
 	int j = 0;
 
@@ -35,6 +37,7 @@ public class CircusOfPlates implements World {
 		speed = 10;
 		shapesPool = ShapesPool.getInstance(screenWidth);
 		shapesPool.setShape("plate");
+		shapesCollection = new ShapesCollection();
 	}
 
 	@Override
@@ -44,7 +47,7 @@ public class CircusOfPlates implements World {
 
 	@Override
 	public List<GameObject> getMovableObjects() {
-		return movable;
+		return shapesCollection.getList();
 	}
 
 	@Override
@@ -74,15 +77,18 @@ public class CircusOfPlates implements World {
 		if (j % 100 == 0) {
 			Shape plate = shapesPool.acquire();
 			i++;
+			shapesCollection.add(plate);
 			movable.add(plate);
 		}
 		j++;
-		for (GameObject o : movable.toArray(new GameObject[movable.size()])) {
+		Iterator<GameObject> iterator = shapesCollection.createIterator();
+		while(!iterator.isDone()) {
+			Shape o = (Shape) iterator.currentItem();
 			o.setY(o.getY() + 1);
 			if (intersect(clown.getTopLeft(), o, 0)) {
 				o.setX(clown.getTopLeft().getX());
 				controlable.add(o);
-				movable.remove(o);
+				shapesCollection.remove(o);
 				clown.addToStack("lStack", (Shape) o);
 			}
 			int x;
@@ -94,7 +100,7 @@ public class CircusOfPlates implements World {
 			if (intersect(clown.getTopRight(), o, x)) {
 				o.setX(clown.getTopRight().getX() + x);
 				controlable.add(o);
-				movable.remove(o);
+				shapesCollection.remove(o);
 				clown.addToStack("rStack", (Plate) o);
 			}
 			for(int i = 0; i < clown.getLeftStack().size(); i++) {
@@ -118,8 +124,9 @@ public class CircusOfPlates implements World {
 			}
 			score+=(before-controlable.size())/3;
 			if (o.getY() == height) {
-				// notify pool
+				shapesPool.release(o);
 			}
+			iterator.next();
 		}
 		return true;
 

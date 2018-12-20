@@ -8,7 +8,7 @@ public class TestMain {
 
 	public static void main(String[] args) {
 		CircusOfPlates circus = new CircusOfPlates(1500, 800);
-		//Difficulty hard = new Hard(circus);
+		Difficulty hard = new Hard(circus);
 		GameEngine.start("test", circus);
 	}
 }

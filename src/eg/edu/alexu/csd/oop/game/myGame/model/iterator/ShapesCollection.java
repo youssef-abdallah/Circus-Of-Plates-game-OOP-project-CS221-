@@ -2,12 +2,14 @@ package eg.edu.alexu.csd.oop.game.myGame.model.iterator;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 
-public class ShapesCollection implements Iterable<Shape> {
-	private List<Shape> list;
+public class ShapesCollection implements Iterable<GameObject> {
+	private List<GameObject> list;
 	public ShapesCollection() {
-		list = new ArrayList<Shape>();
+		list = new ArrayList<GameObject>();
 	}
 	
 	public void add(Shape newPlate) {
@@ -18,12 +20,12 @@ public class ShapesCollection implements Iterable<Shape> {
 		list.remove(plate);
 	}
 	
-	public List<Shape> getList() {
+	public List<GameObject> getList() {
 		return list;
 	}
 
 	@Override
-	public Iterator<Shape> createIterator() {
+	public Iterator<GameObject> createIterator() {
 		return new ShapesIterator(this);
 	}
 
