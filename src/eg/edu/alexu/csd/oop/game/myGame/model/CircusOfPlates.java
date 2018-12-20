@@ -25,7 +25,7 @@ public class CircusOfPlates implements World {
 		clown = new Clown((screenWidth / 2) - 75, (int) (screenHeight) - 155, "/player1.png");
 		controlable.add(clown);
 		Observable observer;
-		observer = new PlateObserver(clown);
+		//observer = new PlateObserver(clown);
 		
 	}
 
@@ -102,6 +102,14 @@ public class CircusOfPlates implements World {
 			for(int i = 0; i < clown.getRightStack().size(); i++) {
 				Plate p = clown.getRightStack().get(i);
 				p.setY(clown.getY() + ((i+1)* -p.getHeight()) );
+			}
+			controlable.clear();
+			controlable.add(clown);
+			for(int i=0;i<clown.getLeftStack().size();i++) {
+				controlable.add(clown.getLeftStack().get(i));
+			}
+			for(int i=0;i<clown.getRightStack().size();i++) {
+				controlable.add(clown.getRightStack().get(i));
 			}
 			if (o.getY() == height) {
 				// notify pool
