@@ -5,7 +5,8 @@ import java.util.List;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
-import eg.edu.alexu.csd.oop.game.myGame.model.factory.PlatesFactory;
+import eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory;
+import eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool;
 
 public class CircusOfPlates implements World {
 
@@ -18,7 +19,7 @@ public class CircusOfPlates implements World {
 	private int speed;
 	private int controlSpeed=15;
 	private int score=0;
-	private PlatesFactory platesFactory;
+	private ShapesPool shapesPool;
 	int i;
 	int j = 0;
 
@@ -32,24 +33,22 @@ public class CircusOfPlates implements World {
 		Observable observer= new PlateObserver();
 		clown.addObserver(observer);
 		speed = 10;
-		platesFactory = PlatesFactory.getInstance(width);
+		shapesPool = ShapesPool.getInstance(screenWidth);
+		shapesPool.setShape("plate");
 	}
 
 	@Override
 	public List<GameObject> getConstantObjects() {
-		// TODO Auto-generated method stub
 		return constant;
 	}
 
 	@Override
 	public List<GameObject> getMovableObjects() {
-		// TODO Auto-generated method stub
 		return movable;
 	}
 
 	@Override
 	public List<GameObject> getControlableObjects() {
-		// TODO Auto-generated method stub
 		return controlable;
 	}
 
@@ -73,7 +72,7 @@ public class CircusOfPlates implements World {
 	@Override
 	public boolean refresh() {
 		if (j % 100 == 0) {
-			Shape plate = platesFactory.makeShape("plate");
+			Shape plate = shapesPool.acquire();
 			i++;
 			movable.add(plate);
 		}

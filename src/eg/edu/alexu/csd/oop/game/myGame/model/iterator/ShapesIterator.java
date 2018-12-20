@@ -2,13 +2,13 @@ package eg.edu.alexu.csd.oop.game.myGame.model.iterator;
 
 import java.util.List;
 
-import eg.edu.alexu.csd.oop.game.myGame.model.Plate;
+import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 
-public class PlatesIterator implements Iterator<Plate> {
-	private List<Plate> list;
+public class ShapesIterator implements Iterator<Shape> {
+	private List<Shape> list;
 	private int index;
 	
-	public PlatesIterator(PlatesCollection platesCollection) {
+	public ShapesIterator(ShapesCollection platesCollection) {
 		this.list = platesCollection.getList();
 		index = 0;
 	}
@@ -31,7 +31,7 @@ public class PlatesIterator implements Iterator<Plate> {
 	}
 
 	@Override
-	public Plate currentItem() {
+	public Shape currentItem() {
 		return list.get(index);
 	}
 
