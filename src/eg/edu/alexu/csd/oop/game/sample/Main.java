@@ -39,8 +39,7 @@ public class Main {
 		});
 		menu.add(exitMenuItem);
 		menuBar.add(menu);
-		//GameEngine.start("Very Simple Game in 99 Line of Code", new eg.edu.alexu.csd.oop.game.sample.world.StarWar(800, 600), menuBar, Color.BLACK);
-		GameEngine.start("Very Simple Game in 99 Line of Code", new eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates(800, 600), menuBar, Color.BLACK);
+		GameEngine.start("Very Simple Game in 99 Line of Code", new eg.edu.alexu.csd.oop.game.sample.world.StarWar(800, 600), menuBar, Color.BLACK);
 
 		/* -------------------------------------------------------------------- */
 		/* allow pause, resume, and restart multiple worlds in the same frame */
