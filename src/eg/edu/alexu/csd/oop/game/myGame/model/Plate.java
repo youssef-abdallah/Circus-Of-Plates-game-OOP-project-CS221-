@@ -1,15 +1,27 @@
 package eg.edu.alexu.csd.oop.game.myGame.model;
 
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 
-public abstract class Plate implements GameObject {
+public  class Plate implements GameObject {
 	private int x;
 	private int y;
 	private boolean visible;
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
+	public Plate(int x,int y) {
+		this.x=x;
+		this.y=y;
+		try {
+			spriteImages[0] = ImageIO.read(getClass().getResourceAsStream("/images.jpg"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	@Override
 	public int getX() {
@@ -44,7 +56,7 @@ public abstract class Plate implements GameObject {
 
 	@Override
 	public boolean isVisible() {
-		return visible;
+		return true;
 	}
 
 	@Override

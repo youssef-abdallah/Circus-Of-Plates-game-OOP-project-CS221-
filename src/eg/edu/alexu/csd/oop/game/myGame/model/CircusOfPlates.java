@@ -13,12 +13,20 @@ public class CircusOfPlates implements World {
 	private final List<GameObject> constant = new LinkedList<GameObject>();
 	private final List<GameObject> movable = new LinkedList<GameObject>();
 	private final List<GameObject> controlable = new LinkedList<GameObject>();
+	private Clown clown;
+	int i;
+	int j=0;
 
 	public CircusOfPlates(int screenWidth, int screenHeight) {
 		width = screenWidth;
 		height = screenHeight;
-		GameObject clown = new Clown(screenWidth/3, (int)(screenHeight)-155, "/player1.png");
+		// GameObject background = new Background(0,0,"/download.jpg");
+		// constant.add(background);
+		clown = new Clown((screenWidth / 2)-75, (int) (screenHeight) - 155, "/player1.png");
 		controlable.add(clown);
+		//for (int i = 0; i < 10; i++) {
+			
+		//}
 	}
 
 	@Override
@@ -51,10 +59,39 @@ public class CircusOfPlates implements World {
 		return height;
 	}
 
+	private boolean intersect(GameObject obj1, GameObject obj2) {
+		if((obj1.getY()==obj2.getY()+20)&&(Math.abs((obj1.getX()-obj2.getX()))<50)) {
+			return true;
+		}
+		return false;
+	}
+
 	@Override
 	public boolean refresh() {
 		// TODO Auto-generated method stub
-		return false;
+		if(j%100==0) {
+		Plate plate = new Plate(i * 100 + 110, 0);
+		i++;
+		movable.add(plate);}
+		j++;
+		for (GameObject o : movable.toArray(new GameObject[movable.size()])) {
+			o.setY(o.getY() + 1);
+			if(intersect(clown.getTopLeft(),o)) {
+				controlable.add(o);
+				movable.remove(o);
+				clown.addToStack("lStack", (Plate) o);
+				System.out.println("left colision");
+			}
+//			if(intersect(clown.getTopLeft(),o)) {
+//				controlable.add(o);
+//				movable.remove(o);
+//				System.out.println("right colision");
+//			}
+			if (o.getY() == height) {
+				//notify pool
+			}
+		}
+		return true;
 	}
 
 	@Override
@@ -66,13 +103,13 @@ public class CircusOfPlates implements World {
 	@Override
 	public int getSpeed() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 10;
 	}
 
 	@Override
 	public int getControlSpeed() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 20;
 	}
 
 }

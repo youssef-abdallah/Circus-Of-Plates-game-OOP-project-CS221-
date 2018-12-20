@@ -2,6 +2,7 @@ package eg.edu.alexu.csd.oop.game.myGame.model;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Stack;
 
 import javax.imageio.ImageIO;
 
@@ -13,6 +14,8 @@ public class Clown implements GameObject {
 	private boolean visible;
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
+	private Stack<Plate> rStack = new Stack<Plate>();
+	private Stack<Plate> lStack = new Stack<Plate>();
 	
 	public Clown(int x, int y, String imagePath) {
 		this.x = x;
@@ -43,7 +46,7 @@ public class Clown implements GameObject {
 
 	@Override
 	public void setY(int y) {
-		this.y = y;
+		//this.y = y; clown don't move up and down
 	}
 
 	@Override
@@ -64,6 +67,33 @@ public class Clown implements GameObject {
 	@Override
 	public BufferedImage[] getSpriteImages() {
 		return spriteImages;
+	}
+	
+	public void addToStack(String stack,Plate plate) {
+		if(stack.equals("lStack")) {
+			lStack.push(plate);
+			//notify();
+		}
+		else if(stack.equals("rStack")) {
+			rStack.push(plate);
+			//notify();
+		}
+	}
+	public GameObject getTopRight() {
+		if(rStack.isEmpty()) {
+			return this;
+		}
+		else {
+			return rStack.peek();
+		}
+	}
+	public GameObject getTopLeft() {
+		if(lStack.isEmpty()) {
+			return this;
+		}
+		else {
+			return lStack.peek();
+		}
 	}
 
 }
