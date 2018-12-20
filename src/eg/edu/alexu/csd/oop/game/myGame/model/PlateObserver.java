@@ -24,6 +24,13 @@ public class PlateObserver implements Observable{
 				lStack.pop();
 			}
 		}
+		if(rStack.size()>2) {
+			if((rStack.get(rStack.size()-1).getType()==rStack.get(rStack.size()-2).getType())&&(rStack.get(rStack.size()-2).getType()==rStack.get(rStack.size()-3).getType())) {
+				rStack.pop();
+				rStack.pop();
+				rStack.pop();
+			}
+		}
 	}
 
 }

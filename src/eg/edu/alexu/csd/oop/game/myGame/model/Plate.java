@@ -18,8 +18,7 @@ public class Plate implements GameObject {
 	public Plate(int x, int y) {
 		this.x = x;
 		this.y = y;
-		type = (int) Math.ceil(Math.random() *  2);
-		System.out.println(type);
+		type = (int) Math.ceil(Math.random() * 2);
 		try {
 			spriteImages[0] = ImageIO.read(getClass().getResourceAsStream("/images" + type + ".png"));
 		} catch (IOException e) {

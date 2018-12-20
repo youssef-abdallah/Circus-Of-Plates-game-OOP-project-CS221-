@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 
-public class Clown implements GameObject,Subject {
+public class Clown implements GameObject, Subject {
 	private int x;
 	private int y;
 	private boolean visible;
@@ -18,7 +18,7 @@ public class Clown implements GameObject,Subject {
 	private Stack<Plate> rStack = new Stack<Plate>();
 	private Stack<Plate> lStack = new Stack<Plate>();
 	private ArrayList<Observable> observers = new ArrayList<Observable>();
-	
+
 	public Clown(int x, int y, String imagePath) {
 		this.x = x;
 		this.y = y;
@@ -48,7 +48,7 @@ public class Clown implements GameObject,Subject {
 
 	@Override
 	public void setY(int y) {
-		//this.y = y; clown don't move up and down
+		// this.y = y; clown don't move up and down
 	}
 
 	@Override
@@ -70,36 +70,37 @@ public class Clown implements GameObject,Subject {
 	public BufferedImage[] getSpriteImages() {
 		return spriteImages;
 	}
-	
-	public void addToStack(String stack,Plate plate) {
-		if(stack.equals("lStack")) {
+
+	public void addToStack(String stack, Plate plate) {
+		if (stack.equals("lStack")) {
 			lStack.push(plate);
 			this.notifyObservers();
-		}
-		else if(stack.equals("rStack")) {
+		} else if (stack.equals("rStack")) {
 			rStack.push(plate);
 			this.notifyObservers();
 		}
 	}
+
 	public GameObject getTopRight() {
-		if(rStack.isEmpty()) {
+		if (rStack.isEmpty()) {
 			return this;
-		}
-		else {
+		} else {
 			return rStack.peek();
 		}
 	}
+
 	public GameObject getTopLeft() {
-		if(lStack.isEmpty()) {
+		if (lStack.isEmpty()) {
 			return this;
-		}
-		else {
+		} else {
 			return lStack.peek();
 		}
 	}
+
 	public Stack<Plate> getLeftStack() {
 		return lStack;
 	}
+
 	public Stack<Plate> getRightStack() {
 		return rStack;
 	}
@@ -119,7 +120,7 @@ public class Clown implements GameObject,Subject {
 	@Override
 	public void notifyObservers() {
 		// TODO Auto-generated method stub
-		for(int i =0;i<observers.size();i++) {
+		for (int i = 0; i < observers.size(); i++) {
 			observers.get(i).update(this);
 		}
 	}
