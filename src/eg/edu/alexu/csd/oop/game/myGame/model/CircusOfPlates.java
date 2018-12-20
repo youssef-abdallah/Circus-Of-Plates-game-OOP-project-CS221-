@@ -16,6 +16,7 @@ public class CircusOfPlates implements World {
 	private final List<GameObject> controlable = new LinkedList<GameObject>();
 	private Clown clown;
 	private int speed;
+	private int controlSpeed=15;
 	private int score=0;
 	private PlatesFactory platesFactory;
 	int i;
@@ -141,7 +142,7 @@ public class CircusOfPlates implements World {
 
 	@Override
 	public int getControlSpeed() {
-		return speed;
+		return controlSpeed;
 	}
 
 }
