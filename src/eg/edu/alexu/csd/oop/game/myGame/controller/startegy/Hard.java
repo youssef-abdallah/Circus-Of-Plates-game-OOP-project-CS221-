@@ -8,6 +8,7 @@ public class Hard implements Difficulty {
 
 	public Hard(CircusOfPlates world) {
 		this.world = world;
+		setDifficulty();
 	}
 
 	@Override

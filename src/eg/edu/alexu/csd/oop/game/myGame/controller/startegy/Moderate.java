@@ -8,6 +8,7 @@ public class Moderate implements Difficulty {
 
 	public Moderate(CircusOfPlates world) {
 		this.world = world;
+		setDifficulty();
 	}
 
 	@Override
