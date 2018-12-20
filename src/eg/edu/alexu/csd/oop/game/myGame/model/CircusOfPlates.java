@@ -107,9 +107,11 @@ public class CircusOfPlates implements World {
 			controlable.clear();
 			controlable.add(clown);
 			for(int i=0;i<clown.getLeftStack().size();i++) {
+				clown.getLeftStack().get(i).setX(clown.getX());
 				controlable.add(clown.getLeftStack().get(i));
 			}
 			for(int i=0;i<clown.getRightStack().size();i++) {
+				clown.getRightStack().get(i).setX(clown.getX()+100);
 				controlable.add(clown.getRightStack().get(i));
 			}
 			score+=(before-controlable.size())/3;
