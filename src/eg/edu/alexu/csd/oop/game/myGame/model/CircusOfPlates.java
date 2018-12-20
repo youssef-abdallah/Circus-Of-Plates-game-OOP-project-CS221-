@@ -57,7 +57,7 @@ public class CircusOfPlates implements World {
 	}
 
 	private boolean intersect(GameObject obj1, GameObject obj2, int x) {
-		if ((obj1.getY() == obj2.getY() + 20) && (Math.abs((obj1.getX() + x - obj2.getX())) < 50)) {
+		if ((obj1.getY() == obj2.getY() + obj2.getHeight()) && (Math.abs((obj1.getX() + x - obj2.getX())) < obj2.getWidth())) {
 			return true;
 		}
 		return false;
@@ -91,6 +91,14 @@ public class CircusOfPlates implements World {
 				controlable.add(o);
 				movable.remove(o);
 				clown.addToStack("rStack", (Plate) o);
+			}
+			for(int i = 0; i < clown.getLeftStack().size(); i++) {
+				Plate p = clown.getLeftStack().get(i);
+				p.setY(clown.getY() + ((i+1)* -p.getHeight()) );
+			}
+			for(int i = 0; i < clown.getRightStack().size(); i++) {
+				Plate p = clown.getRightStack().get(i);
+				p.setY(clown.getY() + ((i+1)* -p.getHeight()) );
 			}
 			if (o.getY() == height) {
 				// notify pool
