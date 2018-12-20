@@ -7,22 +7,26 @@ import javax.imageio.ImageIO;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 
-public  class Plate implements GameObject {
+public class Plate implements GameObject {
 	private int x;
 	private int y;
 	private boolean visible;
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
-	public Plate(int x,int y) {
-		this.x=x;
-		this.y=y;
+	private int type;
+
+	public Plate(int x, int y) {
+		this.x = x;
+		this.y = y;
+		type = (int) Math.ceil(Math.random() *  2);
+		System.out.println(type);
 		try {
-			spriteImages[0] = ImageIO.read(getClass().getResourceAsStream("/images.jpg"));
+			spriteImages[0] = ImageIO.read(getClass().getResourceAsStream("/images" + type + ".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
 	public int getX() {
 		return x;
@@ -62,6 +66,10 @@ public  class Plate implements GameObject {
 	@Override
 	public BufferedImage[] getSpriteImages() {
 		return spriteImages;
+	}
+
+	public int getType() {
+		return type;
 	}
 
 }

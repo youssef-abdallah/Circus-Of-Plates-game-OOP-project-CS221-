@@ -95,9 +95,11 @@ public class Clown implements GameObject {
 			return lStack.peek();
 		}
 	}
-	
 	public Stack<Plate> getLeftStack() {
 		return lStack;
+	}
+	public Stack<Plate> getRightStack() {
+		return rStack;
 	}
 
 }
