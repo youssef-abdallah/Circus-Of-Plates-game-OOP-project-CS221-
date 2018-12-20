@@ -2,13 +2,14 @@ package eg.edu.alexu.csd.oop.game.myGame.model;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Stack;
 
 import javax.imageio.ImageIO;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 
-public class Clown implements GameObject {
+public class Clown implements GameObject,Subject {
 	private int x;
 	private int y;
 	private boolean visible;
@@ -16,6 +17,7 @@ public class Clown implements GameObject {
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
 	private Stack<Plate> rStack = new Stack<Plate>();
 	private Stack<Plate> lStack = new Stack<Plate>();
+	private ArrayList<Observable> observers = new ArrayList<Observable>();
 	
 	public Clown(int x, int y, String imagePath) {
 		this.x = x;
@@ -72,11 +74,11 @@ public class Clown implements GameObject {
 	public void addToStack(String stack,Plate plate) {
 		if(stack.equals("lStack")) {
 			lStack.push(plate);
-			//notify();
+			this.notifyObservers();
 		}
 		else if(stack.equals("rStack")) {
 			rStack.push(plate);
-			//notify();
+			this.notifyObservers();
 		}
 	}
 	public GameObject getTopRight() {
@@ -100,6 +102,26 @@ public class Clown implements GameObject {
 	}
 	public Stack<Plate> getRightStack() {
 		return rStack;
+	}
+
+	@Override
+	public void addObserver(Observable obs) {
+		// TODO Auto-generated method stub
+		observers.add(obs);
+	}
+
+	@Override
+	public void removeObserver(Observable obs) {
+		// TODO Auto-generated method stub
+		observers.remove(obs);
+	}
+
+	@Override
+	public void notifyObservers() {
+		// TODO Auto-generated method stub
+		for(int i =0;i<observers.size();i++) {
+			observers.get(i).update();
+		}
 	}
 
 }

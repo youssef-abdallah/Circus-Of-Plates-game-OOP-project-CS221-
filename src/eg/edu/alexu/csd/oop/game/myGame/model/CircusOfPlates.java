@@ -25,7 +25,7 @@ public class CircusOfPlates implements World {
 		clown = new Clown((screenWidth / 2) - 75, (int) (screenHeight) - 155, "/player1.png");
 		controlable.add(clown);
 		Observable observer;
-		//observer = new PlateObserver(clown);
+		observer = new PlateObserver(clown);
 		
 	}
 
