@@ -1,6 +1,5 @@
 package eg.edu.alexu.csd.oop.game.myGame.model;
 
-
 public interface Subject {
 	public void addObserver(Observable obs);
 
@@ -8,3 +7,4 @@ public interface Subject {
 
 	public void notifyObservers();
 }
+
