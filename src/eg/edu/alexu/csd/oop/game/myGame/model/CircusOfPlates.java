@@ -14,6 +14,7 @@ public class CircusOfPlates implements World {
 	private final List<GameObject> movable = new LinkedList<GameObject>();
 	private final List<GameObject> controlable = new LinkedList<GameObject>();
 	private Clown clown;
+	private int speed;
 	private int score=0;
 	int i;
 	int j = 0;
@@ -27,6 +28,7 @@ public class CircusOfPlates implements World {
 		controlable.add(clown);		
 		Observable observer= new PlateObserver();
 		clown.addObserver(observer);
+		speed = 10;
 	}
 
 	@Override
@@ -49,13 +51,11 @@ public class CircusOfPlates implements World {
 
 	@Override
 	public int getWidth() {
-		// TODO Auto-generated method stub
 		return width;
 	}
 
 	@Override
 	public int getHeight() {
-		// TODO Auto-generated method stub
 		return height;
 	}
 
@@ -68,7 +68,6 @@ public class CircusOfPlates implements World {
 
 	@Override
 	public boolean refresh() {
-		// TODO Auto-generated method stub
 		if (j % 100 == 0) {
 			Plate plate = new Plate(i * 100 + 110, 0);
 			i++;
@@ -125,19 +124,20 @@ public class CircusOfPlates implements World {
 
 	@Override
 	public String getStatus() {
-		// TODO Auto-generated method stub
-		return "Score : "+score;
+		return "Score : "+ score;
 	}
 
 	@Override
 	public int getSpeed() {
-		// TODO Auto-generated method stub
-		return 10;
+		return speed;
+	}
+	
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
 
 	@Override
 	public int getControlSpeed() {
-		// TODO Auto-generated method stub
 		return 20;
 	}
 

@@ -24,6 +24,7 @@ public class Plate implements GameObject {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		visible = true;
 	}
 
 	@Override
@@ -59,7 +60,11 @@ public class Plate implements GameObject {
 
 	@Override
 	public boolean isVisible() {
-		return true;
+		return visible;
+	}
+	
+	public void setVisible(boolean visible) {
+		this.visible = visible;
 	}
 
 	@Override
