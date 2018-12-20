@@ -1,13 +1,15 @@
 package eg.edu.alexu.csd.oop.game.myGame.controller.memento;
 
+import eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates;
+
 public class Memento {
-	private String state;
+	private CircusOfPlates state;
 	
-	public Memento(String state) {
+	public Memento(CircusOfPlates state) {
 		this.state = state;
 	}
 	
-	public String getState() {
+	public CircusOfPlates getState() {
 		return state;
 	}
 }
