@@ -2,11 +2,11 @@ package eg.edu.alexu.csd.oop.game.myGame.controller.startegy;
 
 import eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates;
 
-public class Easy implements Difficulty {
+public class Moderate implements Difficulty{
 
 	CircusOfPlates world;
 
-	Easy(CircusOfPlates world) {
+	Moderate(CircusOfPlates world) {
 		this.world = world;
 	}
 
@@ -14,5 +14,4 @@ public class Easy implements Difficulty {
 	public void setDifficulty() {
 
 	}
-
 }
