@@ -14,6 +14,7 @@ public class CircusOfPlates implements World {
 	private final List<GameObject> movable = new LinkedList<GameObject>();
 	private final List<GameObject> controlable = new LinkedList<GameObject>();
 	private Clown clown;
+	private int score=0;
 	int i;
 	int j = 0;
 
@@ -102,6 +103,7 @@ public class CircusOfPlates implements World {
 				Plate p = clown.getRightStack().get(i);
 				p.setY(clown.getY() + ((i+1)* -p.getHeight()) );
 			}
+			int before=controlable.size();
 			controlable.clear();
 			controlable.add(clown);
 			for(int i=0;i<clown.getLeftStack().size();i++) {
@@ -110,6 +112,7 @@ public class CircusOfPlates implements World {
 			for(int i=0;i<clown.getRightStack().size();i++) {
 				controlable.add(clown.getRightStack().get(i));
 			}
+			score+=(before-controlable.size())/3;
 			if (o.getY() == height) {
 				// notify pool
 			}
@@ -121,7 +124,7 @@ public class CircusOfPlates implements World {
 	@Override
 	public String getStatus() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Score : "+score;
 	}
 
 	@Override
