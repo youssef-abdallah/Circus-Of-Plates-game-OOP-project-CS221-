@@ -15,14 +15,14 @@ public class CircusOfPlates implements World {
 	private final List<GameObject> controlable = new LinkedList<GameObject>();
 	private Clown clown;
 	int i;
-	int j=0;
+	int j = 0;
 
 	public CircusOfPlates(int screenWidth, int screenHeight) {
 		width = screenWidth;
 		height = screenHeight;
 		// GameObject background = new Background(0,0,"/download.jpg");
 		// constant.add(background);
-		clown = new Clown((screenWidth / 2)-75, (int) (screenHeight) - 155, "/player1.png");
+		clown = new Clown((screenWidth / 2) - 75, (int) (screenHeight) - 155, "/player1.png");
 		controlable.add(clown);
 	}
 
@@ -56,8 +56,8 @@ public class CircusOfPlates implements World {
 		return height;
 	}
 
-	private boolean intersect(GameObject obj1, GameObject obj2) {
-		if((obj1.getY()==obj2.getY()+20)&&(Math.abs((obj1.getX()-obj2.getX()))<50)) {
+	private boolean intersect(GameObject obj1, GameObject obj2, int x) {
+		if ((obj1.getY() == obj2.getY() + 20) && (Math.abs((obj1.getX() + x - obj2.getX())) < 50)) {
 			return true;
 		}
 		return false;
@@ -66,29 +66,46 @@ public class CircusOfPlates implements World {
 	@Override
 	public boolean refresh() {
 		// TODO Auto-generated method stub
-		if(j%100==0) {
-		Plate plate = new Plate(i * 100 + 110, 0);
-		i++;
-		movable.add(plate);}
+		if (j % 100 == 0) {
+			Plate plate = new Plate(i * 100 + 110, 0);
+			i++;
+			movable.add(plate);
+		}
 		j++;
 		for (GameObject o : movable.toArray(new GameObject[movable.size()])) {
 			o.setY(o.getY() + 1);
-			if(intersect(clown.getTopLeft(),o)) {
+			if (intersect(clown.getTopLeft(), o, 0)) {
+				o.setX(clown.getTopLeft().getX());
 				controlable.add(o);
 				movable.remove(o);
 				clown.addToStack("lStack", (Plate) o);
-				System.out.println("left colision");
 			}
-//			if(intersect(clown.getTopLeft(),o)) {
-//				controlable.add(o);
-//				movable.remove(o);
-//				System.out.println("right colision");
-//			}
+			int x;
+			if (clown.getTopLeft().getX() == clown.getTopRight().getX()) {
+				x = 100;
+			} else {
+				x = 0;
+			}
+			if (intersect(clown.getTopRight(), o, x)) {
+				o.setX(clown.getTopRight().getX() + x);
+				controlable.add(o);
+				movable.remove(o);
+				clown.addToStack("rStack", (Plate) o);
+			}
+		
+			for(int i = 1; i < clown.getLeftStack().size(); i++) {
+				Plate p = clown.getLeftStack().get(i);
+				p.setY(clown.getY() + (i * -20) );
+			}
+			
+			
+			
 			if (o.getY() == height) {
-				//notify pool
+				// notify pool
 			}
 		}
 		return true;
+
 	}
 
 	@Override
