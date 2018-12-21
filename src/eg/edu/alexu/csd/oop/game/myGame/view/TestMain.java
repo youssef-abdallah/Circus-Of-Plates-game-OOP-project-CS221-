@@ -21,6 +21,7 @@ public class TestMain {
 	private static Memento memento;
 	private static JMenuBar menuBar;
 	
+	
 	public static void main(String[] args) {
 		circus = new CircusOfPlates(1500, 800);
 		Loader platesLoader = new PlatesLoader(circus);
