@@ -1,10 +1,6 @@
 package eg.edu.alexu.csd.oop.game.myGame.model.shapes;
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
-
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 import eg.edu.alexu.csd.oop.game.myGame.view.Images;
 
@@ -18,18 +14,13 @@ public class Plate extends Shape {
 		super.setX(x);
 		super.setY(y);
 		type = (int) Math.ceil(Math.random() * 2);
-		try {
-			spriteImages[0] = ImageIO.read(super.getClass().getResourceAsStream("/images" + type + ".png"));
-			super.setSpriteImages(spriteImages);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		/*if(type == 1) {
+		if(type == 1) {
 			spriteImages[0]=images.getImage("bluePlate");
 		}
 		if(type == 2) {
 			spriteImages[0]=images.getImage("redPlate");
-		}*/
+		}
+		super.setSpriteImages(spriteImages);
 		super.setVisible(true);
 	}
 

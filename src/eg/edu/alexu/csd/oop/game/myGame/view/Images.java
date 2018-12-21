@@ -25,11 +25,11 @@ public class Images {
 	
 	public void loadImages() {
 		try {
-			bluePlate=ImageIO.read(new File("res/images1.png"));
-			redPlate=ImageIO.read(new File("res/images2.png"));
-			blueBall=ImageIO.read(new File("res/blueBall.png"));
-			redBall=ImageIO.read(new File("res/redBall.png"));
-			greenBall=ImageIO.read(new File("res/greenBall.png"));
+			bluePlate=ImageIO.read(new File("./res/images1.png"));
+			redPlate=ImageIO.read(new File("./res/images2.png"));
+			blueBall=ImageIO.read(new File("./res/blueBall.png"));
+			redBall=ImageIO.read(new File("./res/redBall.png"));
+			greenBall=ImageIO.read(new File("./res/greenBall.png"));
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

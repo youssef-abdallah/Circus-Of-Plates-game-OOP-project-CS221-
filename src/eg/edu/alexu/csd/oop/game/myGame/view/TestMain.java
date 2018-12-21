@@ -34,6 +34,7 @@ public class TestMain {
 		JMenuItem easy = new JMenuItem("Easy");
 		JMenuItem moderate = new JMenuItem("Moderate");
 		JMenuItem hard = new JMenuItem("Hard");
+		JMenuItem loadPluginMenuItem = new JMenu("Load Plugin");
 		difficultySubmenu.add(easy);
 		difficultySubmenu.add(moderate);
 		difficultySubmenu.add(hard);
@@ -44,6 +45,7 @@ public class TestMain {
 		menu.add(saveMenuItem);
 		menu.add(loadMenuItem);
 		menu.add(difficultySubmenu);
+		menu.add(loadPluginMenuItem);
 		menuBar.add(menu);
 		gameController = GameEngine.start("test", circus, menuBar, Color.BLACK);
 		newMenuItem.addActionListener(new ActionListener() {
@@ -64,15 +66,12 @@ public class TestMain {
 		easy.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//circus = new CircusOfPlates(1500, 800);
 				new Easy(circus);
-				//gameController = GameEngine.start("test", circus, Color.BLACK);
 			}
 		});
 		moderate.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//circus = new CircusOfPlates(1500, 800);
 				new Moderate(circus);
 				System.out.println(circus.getSpeed());
 			}
@@ -80,9 +79,7 @@ public class TestMain {
 		hard.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//circus = new CircusOfPlates(1500, 800);
 				new Hard(circus);
-				//gameController = GameEngine.start("test", circus, Color.BLACK);
 			}
 		});
 		saveMenuItem.addActionListener(new ActionListener() {
@@ -99,6 +96,13 @@ public class TestMain {
 				circus.restore(memento);
 				circus.setState(newCircus);
 				memento = circus.save();
+				gameController.changeWorld(circus);
+			}
+		});
+		loadPluginMenuItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
 			}
 		});
 	}
