@@ -10,6 +10,7 @@ import javax.swing.JMenuItem;
 import eg.edu.alexu.csd.oop.game.GameEngine;
 import eg.edu.alexu.csd.oop.game.GameEngine.GameController;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard;
+import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Easy;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Moderate;
 import eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates;
@@ -17,7 +18,8 @@ import eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates;
 public class TestMain {
 	private static CircusOfPlates circus;
 	private static GameController gameController;
-
+	private static Memento memento;
+	
 	public static void main(String[] args) {
 		circus = new CircusOfPlates(1500, 800);
 		new Hard(circus);
@@ -82,6 +84,19 @@ public class TestMain {
 				circus = new CircusOfPlates(1500, 800);
 				new Hard(circus);
 				gameController = GameEngine.start("test", circus, Color.BLACK);
+			}
+		});
+		saveMenuItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				circus.setState(circus.clone());
+				memento = circus.save();
+			}
+		});
+		loadMenuItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				circus.restore(memento);
 			}
 		});
 	}

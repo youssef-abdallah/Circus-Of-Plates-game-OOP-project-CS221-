@@ -71,5 +71,11 @@ public class Plate extends Shape {
 	public int getType() {
 		return type;
 	}
+	
+	@Override
+	public Plate clone() {
+		Plate plate = new Plate(this.getX(), this.getY());
+		return plate;
+	}
 
 }

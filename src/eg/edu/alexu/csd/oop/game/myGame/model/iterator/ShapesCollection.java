@@ -23,6 +23,10 @@ public class ShapesCollection implements Iterable<GameObject> {
 	public List<GameObject> getList() {
 		return list;
 	}
+	
+	public void clear() {
+		list.clear();
+	}
 
 	@Override
 	public Iterator<GameObject> createIterator() {

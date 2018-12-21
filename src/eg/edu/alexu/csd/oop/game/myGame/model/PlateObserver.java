@@ -2,7 +2,7 @@ package eg.edu.alexu.csd.oop.game.myGame.model;
 
 import java.util.Stack;
 
-public class PlateObserver implements Observable{
+public class PlateObserver implements Observable {
 
 	private Clown clown;
 	private Stack<Shape> rStack;

@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 
-public abstract class Shape implements GameObject {
+public abstract class Shape implements GameObject, Cloneable {
 	private int x;
 	private int y;
 	private boolean visible;
@@ -63,6 +63,10 @@ public abstract class Shape implements GameObject {
 
 	public int getType() {
 		return type;
+	}
+	
+	public Shape clone() {
+		return null;
 	}
 
 }

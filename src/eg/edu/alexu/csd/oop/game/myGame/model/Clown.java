@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 
-public class Clown implements GameObject, Subject {
+public class Clown implements GameObject, Subject, Cloneable {
 	private int x;
 	private int y;
 	private boolean visible;
@@ -107,22 +107,29 @@ public class Clown implements GameObject, Subject {
 
 	@Override
 	public void addObserver(Observable obs) {
-		// TODO Auto-generated method stub
 		observers.add(obs);
 	}
 
 	@Override
 	public void removeObserver(Observable obs) {
-		// TODO Auto-generated method stub
 		observers.remove(obs);
 	}
 
 	@Override
 	public void notifyObservers() {
-		// TODO Auto-generated method stub
 		for (int i = 0; i < observers.size(); i++) {
 			observers.get(i).update(this);
 		}
 	}
-
+	
+	@Override
+	public Clown clone() {
+		Clown clown = new Clown(new Integer(x), new Integer(y), "/player1.png");
+		clown.rStack = (Stack<Shape>) rStack.clone();
+		clown.lStack = (Stack<Shape>) rStack.clone();
+		for(Observable observer : observers) {
+			clown.addObserver(observer);
+		}
+		return clown;
+	}
 }

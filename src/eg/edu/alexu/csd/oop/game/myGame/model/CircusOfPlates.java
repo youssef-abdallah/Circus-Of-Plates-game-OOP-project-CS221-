@@ -5,25 +5,27 @@ import java.util.List;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
+import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
+import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Originator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.Iterator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.ShapesCollection;
 import eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool;
 
-public class CircusOfPlates implements World {
+public class CircusOfPlates implements World, Originator, Cloneable {
 
 	private final int width;
 	private final int height;
-	private final List<GameObject> constant = new LinkedList<GameObject>();
-	private final List<GameObject> movable = new LinkedList<GameObject>();
-	private final List<GameObject> controlable = new LinkedList<GameObject>();
+	private List<GameObject> constant = new LinkedList<GameObject>();
+	private List<GameObject> movable = new LinkedList<GameObject>();
+	private List<GameObject> controlable = new LinkedList<GameObject>();
 	private Clown clown;
 	private int speed;
 	private int controlSpeed=15;
 	private int score=0;
 	private ShapesPool shapesPool;
 	private ShapesCollection shapesCollection;
-	int i;
-	int j = 0;
+	private int j = 0;
+	private CircusOfPlates state;
 
 	public CircusOfPlates(int screenWidth, int screenHeight) {
 		width = screenWidth;
@@ -76,7 +78,6 @@ public class CircusOfPlates implements World {
 	public boolean refresh() {
 		if (j % 100 == 0) {
 			Shape plate = shapesPool.acquire();
-			i++;
 			shapesCollection.add(plate);
 			movable.add(plate);
 		}
@@ -131,6 +132,10 @@ public class CircusOfPlates implements World {
 		return true;
 
 	}
+	
+	public int getScore() {
+		return score;
+	}
 
 	@Override
 	public String getStatus() {
@@ -149,6 +154,51 @@ public class CircusOfPlates implements World {
 	@Override
 	public int getControlSpeed() {
 		return controlSpeed;
+	}
+
+	@Override
+	public void setState(CircusOfPlates state) {
+		this.state = state;
+	}
+
+	@Override
+	public Memento save() {
+		return new Memento(state);
+	}
+
+	@Override
+	public void restore(Memento m) {
+		state = m.getState();
+		constant = state.getConstantObjects();
+		movable = state.getMovableObjects();
+		controlable = state.getControlableObjects();
+		shapesCollection.clear();
+		for(GameObject o : movable) {
+			shapesCollection.add((Shape) o);
+		}
+		speed = state.getSpeed();
+		score = state.getScore();
+		clown = state.clown;
+	}
+	
+	@Override
+	public CircusOfPlates clone() {
+		CircusOfPlates circus = new CircusOfPlates(width, height);
+		circus.clown = clown.clone();
+		circus.score = score;
+		circus.speed = speed;
+		circus.shapesPool = shapesPool;
+		for(GameObject obj : movable) {
+			Shape shape = (Shape) obj;
+			circus.movable.add(shape.clone());			
+		}
+		for(GameObject obj : controlable) {
+			if (!obj.getClass().isInstance(clown)) {
+				circus.controlable.add(obj);
+			}
+		}
+		circus.controlable.add(clown);
+		return circus;
 	}
 
 }
