@@ -64,26 +64,25 @@ public class TestMain {
 		easy.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				circus = new CircusOfPlates(1500, 800);
+				//circus = new CircusOfPlates(1500, 800);
 				new Easy(circus);
-				gameController = GameEngine.start("test", circus, Color.BLACK);
+				//gameController = GameEngine.start("test", circus, Color.BLACK);
 			}
 		});
 		moderate.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				circus = new CircusOfPlates(1500, 800);
+				//circus = new CircusOfPlates(1500, 800);
 				new Moderate(circus);
 				System.out.println(circus.getSpeed());
-				gameController.changeWorld(circus);
 			}
 		});
 		hard.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				circus = new CircusOfPlates(1500, 800);
+				//circus = new CircusOfPlates(1500, 800);
 				new Hard(circus);
-				gameController = GameEngine.start("test", circus, Color.BLACK);
+				//gameController = GameEngine.start("test", circus, Color.BLACK);
 			}
 		});
 		saveMenuItem.addActionListener(new ActionListener() {

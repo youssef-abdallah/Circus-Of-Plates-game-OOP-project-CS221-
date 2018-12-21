@@ -13,6 +13,6 @@ public class Hard implements Difficulty {
 
 	@Override
 	public void setDifficulty() {
-		world.setSpeed(2);
+		world.setSpeed(1);
 	}
 }
