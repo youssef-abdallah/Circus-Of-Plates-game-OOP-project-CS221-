@@ -1,6 +1,8 @@
 package eg.edu.alexu.csd.oop.game.myGame.model.shapes;
 
 import java.awt.image.BufferedImage;
+import java.lang.reflect.Field;
+
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 import eg.edu.alexu.csd.oop.game.myGame.view.Images;
 
@@ -9,6 +11,25 @@ public class Ball extends Shape{
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
 	private int type;
 	private Images images = Images.getInstance();
+	public Ball() {
+		super.setX(10);
+		super.setY(10);
+		type = (int) Math.ceil(Math.random() * 2);
+		if(type == 1) {
+			spriteImages[0]=images.getImage("blueBall");
+		}
+		if(type == 2) {
+			spriteImages[0]=images.getImage("redBall");
+		}
+		super.setSpriteImages(spriteImages);
+		super.setVisible(true);
+		try {
+			Field field = this.getClass().getDeclaredField("images");
+			field.setAccessible(true);
+		} catch (NoSuchFieldException | SecurityException e) {
+			e.printStackTrace();
+		}
+	}
 
 	public Ball(int x, int y) {
 		super.setX(x);
@@ -22,6 +43,12 @@ public class Ball extends Shape{
 		}
 		super.setSpriteImages(spriteImages);
 		super.setVisible(true);
+		try {
+			Field field = this.getClass().getDeclaredField("images");
+			field.setAccessible(true);
+		} catch (NoSuchFieldException | SecurityException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

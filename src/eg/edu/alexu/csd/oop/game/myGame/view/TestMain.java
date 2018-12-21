@@ -2,15 +2,14 @@ package eg.edu.alexu.csd.oop.game.myGame.view;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import eg.edu.alexu.csd.oop.game.GameEngine;
 import eg.edu.alexu.csd.oop.game.GameEngine.GameController;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard;
+import eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader.Loader;
+import eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader.PlatesLoader;
 import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Easy;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Moderate;
@@ -24,6 +23,8 @@ public class TestMain {
 	
 	public static void main(String[] args) {
 		circus = new CircusOfPlates(1500, 800);
+		Loader platesLoader = new PlatesLoader(circus);
+		platesLoader.loadPlugin("./src/eg/edu/alexu/csd/oop/game/myGame/model/shapes/ball.jar");
 		new Hard(circus);
 		menuBar = new JMenuBar();
 		JMenu menu = new JMenu("File");
@@ -35,7 +36,6 @@ public class TestMain {
 		JMenuItem easy = new JMenuItem("Easy");
 		JMenuItem moderate = new JMenuItem("Moderate");
 		JMenuItem hard = new JMenuItem("Hard");
-		JMenuItem loadPluginMenuItem = new JMenuItem("Load Plugin");
 		difficultySubmenu.add(easy);
 		difficultySubmenu.add(moderate);
 		difficultySubmenu.add(hard);
@@ -45,7 +45,6 @@ public class TestMain {
 		menu.add(saveMenuItem);
 		menu.add(loadMenuItem);
 		menu.add(difficultySubmenu);
-		menu.add(loadPluginMenuItem);
 		menuBar.add(menu);
 		gameController = GameEngine.start("test", circus, menuBar, Color.BLACK);
 		pauseMenuItem.addActionListener(new ActionListener() {
@@ -92,16 +91,6 @@ public class TestMain {
 				circus.setState(newCircus);
 				memento = circus.save();
 				gameController.changeWorld(circus);
-			}
-		});
-		loadPluginMenuItem.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				JFileChooser fileChooser = new JFileChooser();
-				fileChooser.setAcceptAllFileFilterUsed(false);
-				if (fileChooser.showOpenDialog(menuBar) == JFileChooser.APPROVE_OPTION) {
-					
-				}
 			}
 		});
 	}

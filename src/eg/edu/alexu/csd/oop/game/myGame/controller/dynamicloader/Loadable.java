@@ -5,5 +5,4 @@ import java.util.List;
 public interface Loadable {
 	public void addSupportedClasses(Class<?> c);
 	public List<Class<?>> getSupportedClasses();
-	public void setCurrentClass(Class<?> c);
 }

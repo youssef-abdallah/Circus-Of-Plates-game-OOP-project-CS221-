@@ -1,12 +1,13 @@
 package eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader;
 
+import java.lang.reflect.Constructor;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
+import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 
 public class PlatesLoader implements Loader {
 	private Loadable loadable;
@@ -30,9 +31,9 @@ public class PlatesLoader implements Loader {
 			    String className = je.getName().substring(0,je.getName().length() - 6);
 			    className = className.replace('/', '.');
 			    Class<?> c = cl.loadClass(className);
-			    if (c.newInstance() instanceof Plate) {
+			    //Constructor co = c.getConstructor(int.class, int.class);
+			    if (c.newInstance() instanceof Shape) {
 			    	loadable.addSupportedClasses(c);
-			    	loadable.setCurrentClass(c);
 			    }
 
 				}

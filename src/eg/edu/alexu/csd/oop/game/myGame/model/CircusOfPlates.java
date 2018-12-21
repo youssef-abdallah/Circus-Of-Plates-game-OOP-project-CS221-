@@ -1,10 +1,12 @@
 package eg.edu.alexu.csd.oop.game.myGame.model;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
+import eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader.Loadable;
 import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
 import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Originator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.Iterator;
@@ -12,7 +14,7 @@ import eg.edu.alexu.csd.oop.game.myGame.model.iterator.ShapesCollection;
 import eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool;
 import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
-public class CircusOfPlates implements World, Originator, Cloneable {
+public class CircusOfPlates implements World, Originator, Cloneable, Loadable {
 
 	private final int width;
 	private final int height;
@@ -29,6 +31,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 	private ShapesCollection shapesCollection;
 	private int j = 0;
 	private CircusOfPlates state;
+	private List<Class<?>> supportedShapes;
 
 	public CircusOfPlates(int screenWidth, int screenHeight) {
 		width = screenWidth;
@@ -42,6 +45,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 		shapesPool = ShapesPool.getInstance(screenWidth);
 		shapesPool.setShape("plate");
 		shapesCollection = new ShapesCollection();
+		supportedShapes = new ArrayList<Class<?>>();
 	}
 
 	@Override
@@ -86,9 +90,16 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 		if (count % maxCount==0) {
 			count=0;
 			if (j % 100 == 0) {
-				Shape plate = shapesPool.acquire();
-				shapesCollection.add(plate);
-				movable.add(plate);
+				//Shape plate = shapesPool.acquire();
+				Shape plate;
+				try {
+					plate = (Shape) supportedShapes.get(0).newInstance();
+					shapesCollection.add(plate);
+					movable.add(plate);
+				} catch (InstantiationException | IllegalAccessException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			j++;
 			Iterator<GameObject> iterator = shapesCollection.createIterator();
@@ -208,6 +219,16 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 		}
 		circus.controlable.add(clown);
 		return circus;
+	}
+
+	@Override
+	public void addSupportedClasses(Class<?> c) {
+		supportedShapes.add(c);
+	}
+
+	@Override
+	public List<Class<?>> getSupportedClasses() {
+		return supportedShapes;
 	}
 
 }
