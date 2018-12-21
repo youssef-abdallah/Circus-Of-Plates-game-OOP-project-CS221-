@@ -125,8 +125,19 @@ public class Clown implements GameObject, Subject, Cloneable {
 	@Override
 	public Clown clone() {
 		Clown clown = new Clown(new Integer(x), new Integer(y), "/player1.png");
-		clown.rStack = (Stack<Shape>) rStack.clone();
-		clown.lStack = (Stack<Shape>) rStack.clone();
+		Stack<Shape> rightStack = new Stack<Shape>(), leftStack = new Stack<Shape>();
+		Shape[] tmp1 = new Shape[100];
+		Shape[] tmp2 = new Shape[100];
+		rStack.toArray(tmp1);
+		lStack.toArray(tmp2);
+		for(int i = rStack.size() - 1; i >= 0; i--) {
+			rightStack.push(tmp1[i]);
+		}
+		for(int i = lStack.size() - 1; i >= 0; i--) {
+			leftStack.push(tmp2[i]);
+		}
+		clown.rStack = rightStack;
+		clown.lStack = leftStack;
 		for(Observable observer : observers) {
 			clown.addObserver(observer);
 		}
