@@ -1,10 +1,6 @@
 package eg.edu.alexu.csd.oop.game.myGame.model.shapes;
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
-
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 import eg.edu.alexu.csd.oop.game.myGame.view.Images;
 
@@ -25,7 +21,6 @@ public class Ball extends Shape{
 			spriteImages[0]=images.getImage("redBall");
 		}
 		super.setSpriteImages(spriteImages);
-		super.setVisible(true);
 		super.setVisible(true);
 	}
 
