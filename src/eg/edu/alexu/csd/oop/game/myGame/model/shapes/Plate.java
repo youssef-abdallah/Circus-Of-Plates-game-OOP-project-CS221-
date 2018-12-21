@@ -6,11 +6,13 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
+import eg.edu.alexu.csd.oop.game.myGame.view.Images;
 
 public class Plate extends Shape {
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
 	private int type;
+	private Images images = Images.getInstance();
 
 	public Plate(int x, int y) {
 		super.setX(x);
@@ -22,6 +24,12 @@ public class Plate extends Shape {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		/*if(type == 1) {
+			spriteImages[0]=images.getImage("bluePlate");
+		}
+		if(type == 2) {
+			spriteImages[0]=images.getImage("redPlate");
+		}*/
 		super.setVisible(true);
 	}
 
