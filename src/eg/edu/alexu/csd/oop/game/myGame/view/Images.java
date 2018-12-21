@@ -11,7 +11,7 @@ public class Images {
 	private BufferedImage bluePlate;
 	private BufferedImage greenPlate;
 	private BufferedImage redBall;
-	private BufferedImage bleBall;
+	private BufferedImage blueBall;
 	private BufferedImage greenBall;
 	private static Images unique = new Images();
 	
@@ -20,5 +20,39 @@ public class Images {
 	
 	public static Images getInstance(){
 		return unique;
+	}
+	
+	public void loadImages() {
+		try {
+			bluePlate=ImageIO.read(new File("res/images1.png"));
+			redPlate=ImageIO.read(new File("res/images2.png"));
+			blueBall=ImageIO.read(new File("res/blueBall.png"));
+			redBall=ImageIO.read(new File("res/redBall.png"));
+			greenBall=ImageIO.read(new File("res/greenBall.png"));
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public BufferedImage getImage(String type) {
+		if(type.equals("redBall")) {
+			return redBall;
+		}
+		if(type.equals("blueBall")) {
+			return blueBall;
+		}
+		if(type.equals("greenBall")) {
+			return greenBall;
+		}
+		if(type.equals("redPlate")) {
+			return redPlate;
+		}
+		if(type.equals("bluePlate")) {
+			return bluePlate;
+		}
+		if(type.equals("greenPlate")) {
+			return greenPlate;
+		}
+		return null;
 	}
 }
