@@ -78,7 +78,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 
 	@Override
 	public boolean refresh() {
-		if(clown.getLeftStack().size()==5||clown.getRightStack().size()==5) {
+		if(clown.getLeftStack().size()==10||clown.getRightStack().size()==10) {
 			return false;
 		}
 		count++;
