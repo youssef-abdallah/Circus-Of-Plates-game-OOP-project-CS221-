@@ -29,7 +29,6 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 	private ShapesCollection shapesCollection;
 	private int j = 0;
 	private CircusOfPlates state;
-	private boolean restoring = false;
 
 	public CircusOfPlates(int screenWidth, int screenHeight) {
 		width = screenWidth;
@@ -80,9 +79,6 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 
 	@Override
 	public boolean refresh() {
-		if (restoring) {
-			clown.setVisible(false);
-		}
 		if(clown.getLeftStack().size()==10||clown.getRightStack().size()==10) {
 			return false;
 		}
@@ -98,9 +94,6 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 			Iterator<GameObject> iterator = shapesCollection.createIterator();
 			while (!iterator.isDone()) {
 				Shape o = (Shape) iterator.currentItem();
-				if (restoring) {
-					o.setVisible(false);
-				}
 				o.setY(o.getY() + 1);
 				if (intersect(clown.getTopLeft(), o, 0)) {
 					o.setX(clown.getTopLeft().getX());
@@ -184,7 +177,6 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 
 	@Override
 	public void restore(Memento m) {
-		restoring = true;
 		state = m.getState().clone();
 		constant = state.getConstantObjects();
 		movable = state.getMovableObjects();
@@ -196,7 +188,6 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 		speed = state.getSpeed();
 		score = state.getScore();
 		clown = state.clown;
-		restoring = false;
 	}
 
 	@Override

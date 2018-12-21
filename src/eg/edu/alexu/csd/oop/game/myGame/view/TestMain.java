@@ -3,10 +3,11 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-
 import eg.edu.alexu.csd.oop.game.GameEngine;
 import eg.edu.alexu.csd.oop.game.GameEngine.GameController;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard;
@@ -19,13 +20,13 @@ public class TestMain {
 	private static CircusOfPlates circus, newCircus;
 	private static GameController gameController;
 	private static Memento memento;
+	private static JMenuBar menuBar;
 	
 	public static void main(String[] args) {
 		circus = new CircusOfPlates(1500, 800);
 		new Hard(circus);
-		JMenuBar menuBar = new JMenuBar();
+		menuBar = new JMenuBar();
 		JMenu menu = new JMenu("File");
-		JMenuItem newMenuItem = new JMenuItem("New");
 		JMenuItem pauseMenuItem = new JMenuItem("Pause");
 		JMenuItem resumeMenuItem = new JMenuItem("Resume");
 		JMenuItem saveMenuItem = new JMenuItem("Save");
@@ -34,11 +35,10 @@ public class TestMain {
 		JMenuItem easy = new JMenuItem("Easy");
 		JMenuItem moderate = new JMenuItem("Moderate");
 		JMenuItem hard = new JMenuItem("Hard");
-		JMenuItem loadPluginMenuItem = new JMenu("Load Plugin");
+		JMenuItem loadPluginMenuItem = new JMenuItem("Load Plugin");
 		difficultySubmenu.add(easy);
 		difficultySubmenu.add(moderate);
 		difficultySubmenu.add(hard);
-		menu.add(newMenuItem);
 		menu.addSeparator();
 		menu.add(pauseMenuItem);
 		menu.add(resumeMenuItem);
@@ -48,11 +48,6 @@ public class TestMain {
 		menu.add(loadPluginMenuItem);
 		menuBar.add(menu);
 		gameController = GameEngine.start("test", circus, menuBar, Color.BLACK);
-		newMenuItem.addActionListener(new ActionListener() {
-		@Override public void actionPerformed(ActionEvent e) {
-				gameController.changeWorld(new CircusOfPlates(1500, 800));
-			}
-		});
 		pauseMenuItem.addActionListener(new ActionListener() {
 		@Override public void actionPerformed(ActionEvent e) {
 				gameController.pause();
@@ -102,7 +97,11 @@ public class TestMain {
 		loadPluginMenuItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				
+				JFileChooser fileChooser = new JFileChooser();
+				fileChooser.setAcceptAllFileFilterUsed(false);
+				if (fileChooser.showOpenDialog(menuBar) == JFileChooser.APPROVE_OPTION) {
+					
+				}
 			}
 		});
 	}
