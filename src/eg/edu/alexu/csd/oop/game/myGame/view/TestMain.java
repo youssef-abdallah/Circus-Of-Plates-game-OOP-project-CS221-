@@ -16,7 +16,7 @@ import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Moderate;
 import eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates;
 
 public class TestMain {
-	private static CircusOfPlates circus;
+	private static CircusOfPlates circus, newCircus;
 	private static GameController gameController;
 	private static Memento memento;
 	
@@ -88,7 +88,8 @@ public class TestMain {
 		saveMenuItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				circus.setState(circus.clone());
+				newCircus = circus.clone();
+				circus.setState(newCircus);
 				memento = circus.save();
 			}
 		});
@@ -96,6 +97,8 @@ public class TestMain {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				circus.restore(memento);
+				circus.setState(newCircus);
+				memento = circus.save();
 			}
 		});
 	}

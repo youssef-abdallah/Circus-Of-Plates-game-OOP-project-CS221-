@@ -29,6 +29,10 @@ public class Clown implements GameObject, Subject, Cloneable {
 			e.printStackTrace();
 		}
 	}
+	
+	public void setVisible(boolean visible) {
+		this.visible = visible;
+	}
 
 	@Override
 	public int getX() {
