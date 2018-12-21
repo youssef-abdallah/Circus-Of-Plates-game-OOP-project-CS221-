@@ -10,6 +10,7 @@ import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Originator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.Iterator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.ShapesCollection;
 import eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool;
+import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
 public class CircusOfPlates implements World, Originator, Cloneable {
 

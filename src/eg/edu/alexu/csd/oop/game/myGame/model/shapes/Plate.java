@@ -1,9 +1,11 @@
-package eg.edu.alexu.csd.oop.game.myGame.model;
+package eg.edu.alexu.csd.oop.game.myGame.model.shapes;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+
+import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 
 public class Plate extends Shape {
 	private static final int MAX_MSTATE = 1;

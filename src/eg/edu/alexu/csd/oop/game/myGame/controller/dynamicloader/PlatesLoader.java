@@ -6,7 +6,7 @@ import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import eg.edu.alexu.csd.oop.game.myGame.model.Plate;
+import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
 public class PlatesLoader implements Loader {
 	private Loadable loadable;

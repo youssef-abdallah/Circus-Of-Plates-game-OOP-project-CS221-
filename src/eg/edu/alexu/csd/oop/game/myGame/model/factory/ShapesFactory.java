@@ -1,7 +1,7 @@
 package eg.edu.alexu.csd.oop.game.myGame.model.factory;
 
-import eg.edu.alexu.csd.oop.game.myGame.model.Plate;
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
+import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
 public class ShapesFactory {
 	private static ShapesFactory uniqueInstance = new ShapesFactory();

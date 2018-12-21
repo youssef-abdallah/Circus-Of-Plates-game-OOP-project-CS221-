@@ -13,6 +13,6 @@ public class Easy implements Difficulty {
 
 	@Override
 	public void setDifficulty() {
-		world.setSpeed(10);
+		world.setSpeed(7);
 	}
 }
