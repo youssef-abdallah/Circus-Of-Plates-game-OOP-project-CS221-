@@ -19,6 +19,7 @@ public class Images {
 	}
 	
 	public static Images getInstance(){
+		unique.loadImages();
 		return unique;
 	}
 	

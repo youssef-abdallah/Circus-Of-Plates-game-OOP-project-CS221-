@@ -6,22 +6,26 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
+import eg.edu.alexu.csd.oop.game.myGame.view.Images;
 
 public class Ball extends Shape{
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
 	private int type;
+	private Images images = Images.getInstance();
 
 	public Ball(int x, int y) {
 		super.setX(x);
 		super.setY(y);
 		type = (int) Math.ceil(Math.random() * 2);
-		try {
-			spriteImages[0] = ImageIO.read(super.getClass().getResourceAsStream("/images" + type + ".png"));
-			super.setSpriteImages(spriteImages);
-		} catch (IOException e) {
-			e.printStackTrace();
+		if(type == 1) {
+			spriteImages[0]=images.getImage("blueBall");
 		}
+		if(type == 2) {
+			spriteImages[0]=images.getImage("redBall");
+		}
+		super.setSpriteImages(spriteImages);
+		super.setVisible(true);
 		super.setVisible(true);
 	}
 
