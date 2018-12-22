@@ -13,7 +13,7 @@ public class Plate extends Shape {
 	public Plate(int x, int y) {
 		super.setX(x);
 		super.setY(y);
-		type = (int) Math.ceil(Math.random() * 2);
+		type = (int) Math.ceil(Math.random() * 3);
 		if(type == 1) {
 			spriteImages[0]=images.getImage("bluePlate");
 		}
