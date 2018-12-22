@@ -1,5 +1,7 @@
 package eg.edu.alexu.csd.oop.game.myGame.model;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,7 +16,7 @@ import eg.edu.alexu.csd.oop.game.myGame.model.iterator.ShapesCollection;
 import eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool;
 import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
-public class CircusOfPlates implements World, Originator, Cloneable, Loadable {
+public class CircusOfPlates implements World, Originator, Cloneable {
 
 	private final int width;
 	private final int height;
@@ -31,7 +33,6 @@ public class CircusOfPlates implements World, Originator, Cloneable, Loadable {
 	private ShapesCollection shapesCollection;
 	private int j = 0;
 	private CircusOfPlates state;
-	private List<Class<?>> supportedShapes;
 
 	public CircusOfPlates(int screenWidth, int screenHeight) {
 		width = screenWidth;
@@ -45,7 +46,7 @@ public class CircusOfPlates implements World, Originator, Cloneable, Loadable {
 		shapesPool = ShapesPool.getInstance(screenWidth);
 		shapesPool.setShape("plate");
 		shapesCollection = new ShapesCollection();
-		supportedShapes = new ArrayList<Class<?>>();
+
 	}
 
 	@Override
@@ -83,23 +84,17 @@ public class CircusOfPlates implements World, Originator, Cloneable, Loadable {
 
 	@Override
 	public boolean refresh() {
-		if(clown.getLeftStack().size()==10||clown.getRightStack().size()==10) {
+		if (clown.getLeftStack().size() == 10 || clown.getRightStack().size() == 10) {
 			return false;
 		}
 		count++;
-		if (count % maxCount==0) {
-			count=0;
+		if (count % maxCount == 0) {
+			count = 0;
 			if (j % 100 == 0) {
-				//Shape plate = shapesPool.acquire();
-				Shape plate;
-				try {
-					plate = (Shape) supportedShapes.get(0).newInstance();
-					shapesCollection.add(plate);
-					movable.add(plate);
-				} catch (InstantiationException | IllegalAccessException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				Shape plate = shapesPool.acquire();
+				shapesCollection.add(plate);
+				movable.add(plate);
+
 			}
 			j++;
 			Iterator<GameObject> iterator = shapesCollection.createIterator();
@@ -122,7 +117,7 @@ public class CircusOfPlates implements World, Originator, Cloneable, Loadable {
 					o.setX(clown.getTopRight().getX() + x);
 					controlable.add(o);
 					shapesCollection.remove(o);
-					clown.addToStack("rStack", (Plate) o);
+					clown.addToStack("rStack", (Shape) o);
 				}
 				for (int i = 0; i < clown.getLeftStack().size(); i++) {
 					Shape p = clown.getLeftStack().get(i);
@@ -219,16 +214,6 @@ public class CircusOfPlates implements World, Originator, Cloneable, Loadable {
 		}
 		circus.controlable.add(clown);
 		return circus;
-	}
-
-	@Override
-	public void addSupportedClasses(Class<?> c) {
-		supportedShapes.add(c);
-	}
-
-	@Override
-	public List<Class<?>> getSupportedClasses() {
-		return supportedShapes;
 	}
 
 }
