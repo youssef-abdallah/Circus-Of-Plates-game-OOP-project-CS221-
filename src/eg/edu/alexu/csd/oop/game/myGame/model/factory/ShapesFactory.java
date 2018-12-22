@@ -21,7 +21,6 @@ public class ShapesFactory implements Loadable {
 
 	private ShapesFactory() {
 		supportedShapes = new ArrayList<Class<?>>();
-		supportedShapes.add(Plate.class);
 	}
 
 	public Shape makeShape() {

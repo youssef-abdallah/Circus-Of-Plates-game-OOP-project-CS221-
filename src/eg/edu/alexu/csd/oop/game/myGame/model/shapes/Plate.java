@@ -1,6 +1,8 @@
 package eg.edu.alexu.csd.oop.game.myGame.model.shapes;
 
 import java.awt.image.BufferedImage;
+import java.lang.reflect.Field;
+
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 import eg.edu.alexu.csd.oop.game.myGame.view.Images;
 
@@ -22,6 +24,12 @@ public class Plate extends Shape {
 		}
 		if(type == 3) {
 			spriteImages[0]=images.getImage("greenPlate");
+		}
+		try {
+			Field field = this.getClass().getDeclaredField("images");
+			field.setAccessible(true);
+		} catch (NoSuchFieldException | SecurityException e) {
+			e.printStackTrace();
 		}
 		super.setSpriteImages(spriteImages);
 		super.setVisible(true);

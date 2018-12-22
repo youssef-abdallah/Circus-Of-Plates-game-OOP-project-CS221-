@@ -2,6 +2,8 @@ package eg.edu.alexu.csd.oop.game.myGame.view;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -26,7 +28,13 @@ public class TestMain {
 	public static void main(String[] args) {
 		circus = new CircusOfPlates(1500, 800);
 		Loader platesLoader = new PlatesLoader(ShapesFactory.getInstance(1500));
-		platesLoader.loadPlugin("./src/eg/edu/alexu/csd/oop/game/myGame/model/shapes/ball.jar");
+		File file = new File("./src/eg/edu/alexu/csd/oop/game/myGame/model/shapes");
+		File[] files = file.listFiles();
+		for (File jarFile : files) {
+			if (jarFile.getPath().substring(jarFile.getPath().length() - 4, jarFile.getPath().length()).equalsIgnoreCase(".jar")) {
+				platesLoader.loadPlugin(jarFile.getPath());
+			}
+		}
 		new Hard(circus);
 		menuBar = new JMenuBar();
 		JMenu menu = new JMenu("File");

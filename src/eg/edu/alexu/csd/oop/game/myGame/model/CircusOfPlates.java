@@ -21,7 +21,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 	private List<GameObject> movable = new LinkedList<GameObject>();
 	private List<GameObject> controlable = new LinkedList<GameObject>();
 	private Clown clown;
-	private int speed = 1;
+	private int speed = -5;
 	private int controlSpeed = 15;
 	private int score = 0;
 	private int count = 0;
@@ -86,7 +86,10 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 			return false;
 		}
 		count++;
-		if (count % maxCount == 0) {
+		if (count % maxCount != 0) {
+			return true;
+		}
+		else {
 			count = 0;
 			if (j % 100 == 0) {
 				Shape plate = shapesPool.acquire();
