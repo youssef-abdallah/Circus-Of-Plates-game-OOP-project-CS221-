@@ -10,6 +10,8 @@ import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Originator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.Iterator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.ShapesCollection;
 import eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool;
+import eg.edu.alexu.csd.oop.game.myGame.model.shapes.ControlState;
+import eg.edu.alexu.csd.oop.game.myGame.model.shapes.MovingState;
 
 public class CircusOfPlates implements World, Originator, Cloneable {
 
@@ -71,6 +73,8 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 	private boolean intersect(GameObject obj1, GameObject obj2, int x) {
 		if ((obj1.getY() == obj2.getY() + obj2.getHeight())
 				&& (Math.abs((obj1.getX() + x - obj2.getX())) < obj2.getWidth())) {
+			obj2.setY(obj1.getY()-obj2.getHeight());
+			((Shape) obj2).setState(new ControlState());
 			return true;
 		}
 		return false;
@@ -86,9 +90,9 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 			count = 0;
 			if (j % 100 == 0) {
 				Shape plate = shapesPool.acquire();
+				plate.setState(new MovingState());
 				shapesCollection.add(plate);
 				movable.add(plate);
-
 			}
 			j++;
 			Iterator<GameObject> iterator = shapesCollection.createIterator();
@@ -113,7 +117,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 					shapesCollection.remove(o);
 					clown.addToStack("rStack", (Shape) o);
 				}
-				for (int i = 0; i < clown.getLeftStack().size(); i++) {
+				/*for (int i = 0; i < clown.getLeftStack().size(); i++) {
 					Shape p = clown.getLeftStack().get(i);
 					if (i == 0) {
 						p.setY(clown.getY() - p.getHeight());
@@ -128,7 +132,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 					} else {
 						p.setY(clown.getRightStack().get(i - 1).getY() - p.getHeight());
 					}
-				}
+				}*/
 				int before = controlable.size();
 				controlable.clear();
 				controlable.add(clown);
