@@ -1,5 +1,6 @@
 package eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader;
 
+import java.lang.reflect.Constructor;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Enumeration;
@@ -30,8 +31,8 @@ public class PlatesLoader implements Loader {
 			    String className = je.getName().substring(0,je.getName().length() - 6);
 			    className = className.replace('/', '.');
 			    Class<?> c = cl.loadClass(className);
-			    //Constructor co = c.getConstructor(int.class, int.class);
-			    if (c.newInstance() instanceof Shape) {
+			    Constructor <?> co = c.getConstructor(int.class, int.class);
+			    if (co.newInstance(10, 10) instanceof Shape) {
 			    	loadable.addSupportedClasses(c);
 			    }
 

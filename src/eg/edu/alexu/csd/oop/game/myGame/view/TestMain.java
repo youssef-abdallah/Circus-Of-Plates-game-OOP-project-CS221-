@@ -14,6 +14,7 @@ import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Easy;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Moderate;
 import eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates;
+import eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory;
 
 public class TestMain {
 	private static CircusOfPlates circus, newCircus;
@@ -24,7 +25,7 @@ public class TestMain {
 	
 	public static void main(String[] args) {
 		circus = new CircusOfPlates(1500, 800);
-		Loader platesLoader = new PlatesLoader(circus);
+		Loader platesLoader = new PlatesLoader(ShapesFactory.getInstance(1500));
 		platesLoader.loadPlugin("./src/eg/edu/alexu/csd/oop/game/myGame/model/shapes/ball.jar");
 		new Hard(circus);
 		menuBar = new JMenuBar();

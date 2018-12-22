@@ -7,7 +7,6 @@ import java.util.List;
 
 import eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader.Loadable;
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
-import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Ball;
 import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
 public class ShapesFactory implements Loadable {
@@ -23,7 +22,6 @@ public class ShapesFactory implements Loadable {
 	private ShapesFactory() {
 		supportedShapes = new ArrayList<Class<?>>();
 		supportedShapes.add(Plate.class);
-		supportedShapes.add(Ball.class);
 	}
 
 	public Shape makeShape() {
