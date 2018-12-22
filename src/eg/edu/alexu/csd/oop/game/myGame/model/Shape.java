@@ -3,6 +3,7 @@ package eg.edu.alexu.csd.oop.game.myGame.model;
 import java.awt.image.BufferedImage;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
+import eg.edu.alexu.csd.oop.game.myGame.model.shapes.State;
 
 public abstract class Shape implements GameObject, Cloneable {
 	private int x;
@@ -11,6 +12,7 @@ public abstract class Shape implements GameObject, Cloneable {
 	private static final int MAX_MSTATE = 1;
 	private BufferedImage[] spriteImages = new BufferedImage[MAX_MSTATE];
 	private int type;
+	private State state=null;
 
 	@Override
 	public int getX() {
@@ -30,7 +32,12 @@ public abstract class Shape implements GameObject, Cloneable {
 
 	@Override
 	public void setY(int y) {
-		this.y = y;
+		if(state==null) {
+			this.y=0;
+		}
+		else if (state.setY(y) != -1) {
+			this.y = state.setY(y);
+		}
 	}
 
 	@Override
@@ -47,7 +54,7 @@ public abstract class Shape implements GameObject, Cloneable {
 	public boolean isVisible() {
 		return visible;
 	}
-	
+
 	public void setVisible(boolean visible) {
 		this.visible = visible;
 	}
@@ -56,7 +63,7 @@ public abstract class Shape implements GameObject, Cloneable {
 	public BufferedImage[] getSpriteImages() {
 		return spriteImages;
 	}
-	
+
 	protected void setSpriteImages(BufferedImage[] spriteImages) {
 		this.spriteImages = spriteImages;
 	}
@@ -64,9 +71,13 @@ public abstract class Shape implements GameObject, Cloneable {
 	public int getType() {
 		return type;
 	}
-	
+
 	public Shape clone() {
 		return null;
+	}
+
+	public void setState(State state) {
+		this.state = state;
 	}
 
 }
