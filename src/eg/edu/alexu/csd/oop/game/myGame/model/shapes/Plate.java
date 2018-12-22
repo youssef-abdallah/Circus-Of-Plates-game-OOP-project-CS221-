@@ -20,6 +20,9 @@ public class Plate extends Shape {
 		if(type == 2) {
 			spriteImages[0]=images.getImage("redPlate");
 		}
+		if(type == 3) {
+			spriteImages[0]=images.getImage("greenPlate");
+		}
 		super.setSpriteImages(spriteImages);
 		super.setVisible(true);
 	}

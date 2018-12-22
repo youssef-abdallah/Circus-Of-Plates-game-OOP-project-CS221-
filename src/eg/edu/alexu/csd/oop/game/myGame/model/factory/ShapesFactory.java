@@ -7,6 +7,7 @@ import java.util.List;
 
 import eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader.Loadable;
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
+import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Ball;
 import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
 public class ShapesFactory implements Loadable {
@@ -22,12 +23,15 @@ public class ShapesFactory implements Loadable {
 	private ShapesFactory() {
 		supportedShapes = new ArrayList<Class<?>>();
 		supportedShapes.add(Plate.class);
+		supportedShapes.add(Ball.class);
 	}
 
-	public Shape makeShape(String shapeName) {
+	public Shape makeShape() {
 		try {
-			Constructor<?> co = supportedShapes.get(0).getConstructor(int.class, int.class);
-			Shape plate = (Shape) co.newInstance((int) Math.ceil(Math.random() * width),0);
+			int size = supportedShapes.size();
+			Constructor<?> co = supportedShapes.get((int) Math.floor(Math.random() * size)).getConstructor(int.class,
+					int.class);
+			Shape plate = (Shape) co.newInstance((int) Math.ceil(Math.random() * width), 0);
 			return plate;
 		} catch (NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
@@ -40,10 +44,7 @@ public class ShapesFactory implements Loadable {
 		} catch (InvocationTargetException e) {
 			e.printStackTrace();
 		}
-		if ("plate".equalsIgnoreCase(shapeName)) {
-			Shape plate = new Plate((int) Math.ceil(Math.random() * width), 0);
-			return plate;
-		}
+
 		return null;
 	}
 

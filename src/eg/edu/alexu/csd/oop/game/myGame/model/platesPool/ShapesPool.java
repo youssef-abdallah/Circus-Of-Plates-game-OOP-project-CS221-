@@ -4,7 +4,6 @@ import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 import eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory;
 
 public class ShapesPool extends ObjectPool<Shape> {
-	private static String shape;
 	private static ShapesFactory factory;
 	private static int width;
 	private static ShapesPool uniqueInstance;
@@ -22,13 +21,7 @@ public class ShapesPool extends ObjectPool<Shape> {
 		super();
 		factory = ShapesFactory.getInstance(width);
 	}
-	
-	public static String getShape() {
-		return shape;
-	}
-	public static void setShape(String shape) {
-		ShapesPool.shape = shape;
-	}
+
 	public static int getWidth() {
 		return width;
 	}
@@ -37,7 +30,7 @@ public class ShapesPool extends ObjectPool<Shape> {
 	}
 	@Override
 	protected Shape create() {
-		return factory.makeShape(shape);
+		return factory.makeShape();
 	}
 	
 	@Override

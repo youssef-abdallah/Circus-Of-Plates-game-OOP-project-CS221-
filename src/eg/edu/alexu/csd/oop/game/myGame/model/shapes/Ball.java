@@ -14,13 +14,15 @@ public class Ball extends Shape{
 	public Ball() {
 		super.setX(10);
 		super.setY(10);
-		type = (int) Math.ceil(Math.random() * 2);
+		type = (int) Math.ceil(Math.random() * 3);
 		if(type == 1) {
 			spriteImages[0]=images.getImage("blueBall");
 		}
 		if(type == 2) {
 			spriteImages[0]=images.getImage("redBall");
+			System.out.println("red");
 		}
+		
 		super.setSpriteImages(spriteImages);
 		super.setVisible(true);
 		try {
@@ -34,12 +36,15 @@ public class Ball extends Shape{
 	public Ball(int x, int y) {
 		super.setX(x);
 		super.setY(y);
-		type = (int) Math.ceil(Math.random() * 2);
+		type = (int) Math.ceil(Math.random() * 3);
 		if(type == 1) {
 			spriteImages[0]=images.getImage("blueBall");
 		}
 		if(type == 2) {
 			spriteImages[0]=images.getImage("redBall");
+		}
+		if(type == 3) {
+			spriteImages[0]=images.getImage("greenBall");
 		}
 		super.setSpriteImages(spriteImages);
 		super.setVisible(true);

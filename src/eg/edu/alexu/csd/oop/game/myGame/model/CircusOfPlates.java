@@ -1,20 +1,15 @@
 package eg.edu.alexu.csd.oop.game.myGame.model;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
-import eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader.Loadable;
 import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
 import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Originator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.Iterator;
 import eg.edu.alexu.csd.oop.game.myGame.model.iterator.ShapesCollection;
 import eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool;
-import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
 public class CircusOfPlates implements World, Originator, Cloneable {
 
@@ -44,7 +39,6 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 		Observable observer = new PlateObserver();
 		clown.addObserver(observer);
 		shapesPool = ShapesPool.getInstance(screenWidth);
-		shapesPool.setShape("plate");
 		shapesCollection = new ShapesCollection();
 
 	}
@@ -121,11 +115,19 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 				}
 				for (int i = 0; i < clown.getLeftStack().size(); i++) {
 					Shape p = clown.getLeftStack().get(i);
-					p.setY(clown.getY() + ((i + 1) * -p.getHeight()));
+					if (i == 0) {
+						p.setY(clown.getY() - p.getHeight());
+					} else {
+						p.setY(clown.getLeftStack().get(i - 1).getY() - p.getHeight());
+					}
 				}
 				for (int i = 0; i < clown.getRightStack().size(); i++) {
 					Shape p = clown.getRightStack().get(i);
-					p.setY(clown.getY() + ((i + 1) * -p.getHeight()));
+					if (i == 0) {
+						p.setY(clown.getY() - p.getHeight());
+					} else {
+						p.setY(clown.getRightStack().get(i - 1).getY() - p.getHeight());
+					}
 				}
 				int before = controlable.size();
 				controlable.clear();
