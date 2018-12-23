@@ -2,7 +2,7 @@ package eg.edu.alexu.csd.oop.game.myGame.model;
 
 import java.util.LinkedList;
 import java.util.List;
-
+import org.apache.log4j.Logger;
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
 import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
@@ -14,7 +14,7 @@ import eg.edu.alexu.csd.oop.game.myGame.model.shapes.ControlState;
 import eg.edu.alexu.csd.oop.game.myGame.model.shapes.MovingState;
 
 public class CircusOfPlates implements World, Originator, Cloneable {
-
+	private static final Logger log = Logger.getLogger(CircusOfPlates.class);
 	private final int width;
 	private final int height;
 	private List<GameObject> constant = new LinkedList<GameObject>();
@@ -32,6 +32,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 	private CircusOfPlates state;
 
 	public CircusOfPlates(int screenWidth, int screenHeight) {
+		log.info("Initiating circus of plates");
 		width = screenWidth;
 		height = screenHeight;
 		// GameObject background = new Background(0,0,"/download.jpg");
@@ -207,6 +208,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 
 	@Override
 	public CircusOfPlates clone() {
+		log.info("Cloning circus of plates");
 		CircusOfPlates circus = new CircusOfPlates(width, height);
 		circus.clown = clown.clone();
 		circus.score = score;

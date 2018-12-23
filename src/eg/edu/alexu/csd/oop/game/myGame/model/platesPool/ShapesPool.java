@@ -1,9 +1,12 @@
 package eg.edu.alexu.csd.oop.game.myGame.model.platesPool;
 
+import org.apache.log4j.Logger;
+
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
 import eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory;
 
 public class ShapesPool extends ObjectPool<Shape> {
+	private static final Logger log = Logger.getLogger(ShapesPool.class);
 	private static ShapesFactory factory;
 	private static int width;
 	private static ShapesPool uniqueInstance;
@@ -30,6 +33,7 @@ public class ShapesPool extends ObjectPool<Shape> {
 	}
 	@Override
 	protected Shape create() {
+		log.info("pool creating a new shape");
 		return factory.makeShape();
 	}
 	
@@ -39,6 +43,7 @@ public class ShapesPool extends ObjectPool<Shape> {
 	}
 	@Override
 	public void expire(Shape object) {
+		log.info("pool expiring a shape");
 		object.setVisible(false);
 	}
 

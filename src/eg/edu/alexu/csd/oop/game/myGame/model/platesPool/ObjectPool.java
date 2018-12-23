@@ -2,8 +2,11 @@ package eg.edu.alexu.csd.oop.game.myGame.model.platesPool;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
+import org.apache.log4j.Logger;
+
 
 public abstract class ObjectPool<T> {
+	private static final Logger log = Logger.getLogger(ObjectPool.class);
 	private Hashtable<T, Long> locked, unlocked;
 	private long expirationTime;
 	public ObjectPool() {
@@ -17,6 +20,7 @@ public abstract class ObjectPool<T> {
 	public abstract void expire(T object);
 	
 	public synchronized T acquire() {
+		log.info("Acquiring from pool");
 		long now = System.currentTimeMillis();
 		T t;
 		if (unlocked.size() > 0) {
@@ -46,6 +50,7 @@ public abstract class ObjectPool<T> {
 	}
 	
 	public synchronized void release(T object) {
+		log.info("releasing from pool");
 		locked.remove(object);
 		unlocked.put(object, System.currentTimeMillis());
 	}

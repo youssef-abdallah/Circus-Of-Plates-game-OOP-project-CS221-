@@ -7,10 +7,14 @@ import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+import org.apache.log4j.Logger;
+
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
+import eg.edu.alexu.csd.oop.game.myGame.view.TestMain;
 
 public class PlatesLoader implements Loader {
 	private Loadable loadable;
+	private static final Logger log = Logger.getLogger(TestMain.class);
 	public PlatesLoader(Loadable loadable) {
 		this.loadable = loadable;
 	}
@@ -18,6 +22,7 @@ public class PlatesLoader implements Loader {
 	@Override
 	public void loadPlugin(String path) {
 		try(JarFile jarFile = new JarFile(path);) {
+			log.info("Trying to load Shape Classes");
 			Enumeration<JarEntry> e = jarFile.entries();
 			URL[] urls = { new URL("jar:file:" + path +"!/") };
 			URLClassLoader cl = URLClassLoader.newInstance(urls);
@@ -38,6 +43,7 @@ public class PlatesLoader implements Loader {
 
 				}
 			} catch(Exception e) {
+				log.info("failed to load classes");
 				e.printStackTrace();
 			}
 	}

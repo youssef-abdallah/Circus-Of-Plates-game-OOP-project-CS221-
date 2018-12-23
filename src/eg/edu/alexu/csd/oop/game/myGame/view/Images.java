@@ -4,9 +4,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 import javax.imageio.ImageIO;
+import org.apache.log4j.Logger;
 
 public class Images {
-
+	private static final Logger log = Logger.getLogger(Images.class);
 	private BufferedImage redPlate;
 	private BufferedImage bluePlate;
 	private BufferedImage greenPlate;
@@ -25,6 +26,7 @@ public class Images {
 	
 	public void loadImages() {
 		try {
+			log.info("Loading Images");
 			bluePlate=ImageIO.read(new File("./res/images1.png"));
 			redPlate=ImageIO.read(new File("./res/images2.png"));
 			greenPlate=ImageIO.read(new File("./res/images3.png"));
@@ -32,6 +34,7 @@ public class Images {
 			redBall=ImageIO.read(new File("./res/redBall.png"));
 			greenBall=ImageIO.read(new File("./res/greenBall.png"));
 		}catch(Exception e) {
+			log.info("Failed to load images from files");
 			e.printStackTrace();
 		}
 	}

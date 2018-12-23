@@ -5,14 +5,17 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import eg.edu.alexu.csd.oop.game.myGame.controller.dynamicloader.Loadable;
 import eg.edu.alexu.csd.oop.game.myGame.model.Shape;
-import eg.edu.alexu.csd.oop.game.myGame.model.shapes.Plate;
 
 public class ShapesFactory implements Loadable {
 	private static ShapesFactory uniqueInstance = new ShapesFactory();
 	private static int width;
 	private static List<Class<?>> supportedShapes;
+	private static final Logger log = Logger.getLogger(ShapesFactory.class);
+
 
 	public static ShapesFactory getInstance(int backgroundWidth) {
 		width = backgroundWidth;
@@ -24,6 +27,7 @@ public class ShapesFactory implements Loadable {
 	}
 
 	public Shape makeShape() {
+		log.info("Making shape from factory");
 		try {
 			int size = supportedShapes.size();
 			Constructor<?> co = supportedShapes.get((int) Math.floor(Math.random() * size)).getConstructor(int.class,

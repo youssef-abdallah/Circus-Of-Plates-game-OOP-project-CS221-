@@ -4,12 +4,12 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Stack;
-
 import javax.imageio.ImageIO;
-
+import org.apache.log4j.Logger;
 import eg.edu.alexu.csd.oop.game.GameObject;
 
 public class Clown implements GameObject, Subject, Cloneable {
+	private static final Logger log = Logger.getLogger(Clown.class);
 	private int x;
 	private int y;
 	private boolean visible;
@@ -20,6 +20,7 @@ public class Clown implements GameObject, Subject, Cloneable {
 	private ArrayList<Observable> observers = new ArrayList<Observable>();
 
 	public Clown(int x, int y, String imagePath) {
+		log.info("Instantiating a clown");
 		this.x = x;
 		this.y = y;
 		this.visible = true;
@@ -77,9 +78,11 @@ public class Clown implements GameObject, Subject, Cloneable {
 
 	public void addToStack(String stack, Shape plate) {
 		if (stack.equals("lStack")) {
+			log.info("Adding to left stack");
 			lStack.push(plate);
 			this.notifyObservers();
 		} else if (stack.equals("rStack")) {
+			log.info("Adding to right stack");
 			rStack.push(plate);
 			this.notifyObservers();
 		}
@@ -128,6 +131,7 @@ public class Clown implements GameObject, Subject, Cloneable {
 	
 	@Override
 	public Clown clone() {
+		log.info("cloning a clown");
 		Clown clown = new Clown(new Integer(x), new Integer(y), "/player1.png");
 		Stack<Shape> rightStack = new Stack<Shape>(), leftStack = new Stack<Shape>();
 		Shape[] tmp1 = new Shape[100];
