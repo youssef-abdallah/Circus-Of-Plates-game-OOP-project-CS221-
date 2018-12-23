@@ -21,7 +21,7 @@ public class Background implements GameObject{
 		setY(0);
 		this.visible = true;
 		try {
-			spriteImages[0] = ImageIO.read(new File("./res/background.png"));
+			spriteImages[0] = ImageIO.read(this.getClass().getResourceAsStream("/background.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

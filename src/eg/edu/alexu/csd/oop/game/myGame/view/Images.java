@@ -27,12 +27,12 @@ public class Images {
 	public void loadImages() {
 		try {
 			log.info("Loading Images");
-			bluePlate=ImageIO.read(new File("./res/images1.png"));
-			redPlate=ImageIO.read(new File("./res/images2.png"));
-			greenPlate=ImageIO.read(new File("./res/images3.png"));
-			blueBall=ImageIO.read(new File("./res/blueBall.png"));
-			redBall=ImageIO.read(new File("./res/redBall.png"));
-			greenBall=ImageIO.read(new File("./res/greenBall.png"));
+			bluePlate=ImageIO.read(this.getClass().getResourceAsStream("/images1.png"));
+			redPlate=ImageIO.read(this.getClass().getResourceAsStream("/images2.png"));
+			greenPlate=ImageIO.read(this.getClass().getResourceAsStream("/images3.png"));
+			blueBall=ImageIO.read(this.getClass().getResourceAsStream("/blueBall.png"));
+			redBall=ImageIO.read(this.getClass().getResourceAsStream("/redBall.png"));
+			greenBall=ImageIO.read(this.getClass().getResourceAsStream("/greenBall.png"));
 		}catch(Exception e) {
 			log.info("Failed to load images from files");
 			e.printStackTrace();

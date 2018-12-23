@@ -7,7 +7,6 @@ import java.io.File;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-
 import eg.edu.alexu.csd.oop.game.GameEngine;
 import eg.edu.alexu.csd.oop.game.GameEngine.GameController;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard;
@@ -32,7 +31,7 @@ public class TestMain {
 		sound.start();
 		circus = new CircusOfPlates(1500, 800);
 		Loader platesLoader = new PlatesLoader(ShapesFactory.getInstance(1500));
-		File file = new File("./src/eg/edu/alexu/csd/oop/game/myGame/model/shapes");
+		File file = new File("./");
 		File[] files = file.listFiles();
 		for (File jarFile : files) {
 			if (jarFile.getPath().substring(jarFile.getPath().length() - 4, jarFile.getPath().length()).equalsIgnoreCase(".jar")) {
