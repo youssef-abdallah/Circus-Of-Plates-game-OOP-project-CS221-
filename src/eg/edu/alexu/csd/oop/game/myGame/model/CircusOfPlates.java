@@ -1,12 +1,10 @@
 package eg.edu.alexu.csd.oop.game.myGame.model;
 
-import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.imageio.ImageIO;
-
 import org.apache.log4j.Logger;
+
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
 import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
@@ -39,7 +37,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 		log.info("Initiating circus of plates");
 		width = screenWidth;
 		height = screenHeight;
-		Background background = new Background("background.png");
+		Background background = new Background("/background.png");
 		constant.add(background);
 		clown = new Clown((screenWidth / 2) - 75, (int) (screenHeight) - 155, "/player1.png");
 		controlable.add(clown);
@@ -78,7 +76,7 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 	private boolean intersect(GameObject obj1, GameObject obj2, int x) {
 		if ((obj1.getY() == obj2.getY() + obj2.getHeight())
 				&& (Math.abs((obj1.getX() + x - obj2.getX())) < obj2.getWidth())) {
-			obj2.setY(obj1.getY()-obj2.getHeight());
+			obj2.setY(obj1.getY() - obj2.getHeight());
 			((Shape) obj2).setState(new ControlState());
 			return true;
 		}
@@ -87,76 +85,71 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 
 	@Override
 	public boolean refresh() {
-		if (clown.getLeftStack().size() == 10 || clown.getRightStack().size() == 10) {
-			return false;
-		}
-		count++;
-		if (count % maxCount != 0) {
-			return true;
-		}
-		else {
-			count = 0;
-			if (j % 100 == 0) {
-				Shape plate = shapesPool.acquire();
-				plate.setState(new MovingState());
-				shapesCollection.add(plate);
-				movable.add(plate);
+		for (int h = 0; h < maxCount; h++) {
+			if (clown.getLeftStack().size() == 10 || clown.getRightStack().size() == 10) {
+				return false;
 			}
-			j++;
-			Iterator<GameObject> iterator = shapesCollection.createIterator();
-			while (!iterator.isDone()) {
-				Shape o = (Shape) iterator.currentItem();
-				o.setY(o.getY() + 1);
-				if (intersect(clown.getTopLeft(), o, 0)) {
-					o.setX(clown.getTopLeft().getX());
-					controlable.add(o);
-					shapesCollection.remove(o);
-					clown.addToStack("lStack", (Shape) o);
+			// count++;
+			// if (count % maxCount != 0) {
+			// return true;
+			// }
+			else {
+				count = 0;
+				if (j % 100 == 0) {
+					Shape plate = shapesPool.acquire();
+					plate.setState(new MovingState());
+					shapesCollection.add(plate);
+					movable.add(plate);
 				}
-				int x;
-				if (clown.getTopLeft().getX() == clown.getTopRight().getX()) {
-					x = 100;
-				} else {
-					x = 0;
-				}
-				if (intersect(clown.getTopRight(), o, x)) {
-					o.setX(clown.getTopRight().getX() + x);
-					controlable.add(o);
-					shapesCollection.remove(o);
-					clown.addToStack("rStack", (Shape) o);
-				}
-				/*for (int i = 0; i < clown.getLeftStack().size(); i++) {
-					Shape p = clown.getLeftStack().get(i);
-					if (i == 0) {
-						p.setY(clown.getY() - p.getHeight());
-					} else {
-						p.setY(clown.getLeftStack().get(i - 1).getY() - p.getHeight());
+				j++;
+				Iterator<GameObject> iterator = shapesCollection.createIterator();
+				while (!iterator.isDone()) {
+					Shape o = (Shape) iterator.currentItem();
+					o.setY(o.getY() + 1);
+					if (intersect(clown.getTopLeft(), o, 0)) {
+						o.setX(clown.getTopLeft().getX());
+						controlable.add(o);
+						shapesCollection.remove(o);
+						clown.addToStack("lStack", (Shape) o);
 					}
-				}
-				for (int i = 0; i < clown.getRightStack().size(); i++) {
-					Shape p = clown.getRightStack().get(i);
-					if (i == 0) {
-						p.setY(clown.getY() - p.getHeight());
+					int x;
+					if (clown.getTopLeft().getX() == clown.getTopRight().getX()) {
+						x = 100;
 					} else {
-						p.setY(clown.getRightStack().get(i - 1).getY() - p.getHeight());
+						x = 0;
 					}
-				}*/
-				int before = controlable.size();
-				controlable.clear();
-				controlable.add(clown);
-				for (int i = 0; i < clown.getLeftStack().size(); i++) {
-					clown.getLeftStack().get(i).setX(clown.getX());
-					controlable.add(clown.getLeftStack().get(i));
+					if (intersect(clown.getTopRight(), o, x)) {
+						o.setX(clown.getTopRight().getX() + x);
+						controlable.add(o);
+						shapesCollection.remove(o);
+						clown.addToStack("rStack", (Shape) o);
+					}
+					/*
+					 * for (int i = 0; i < clown.getLeftStack().size(); i++) { Shape p =
+					 * clown.getLeftStack().get(i); if (i == 0) { p.setY(clown.getY() -
+					 * p.getHeight()); } else { p.setY(clown.getLeftStack().get(i - 1).getY() -
+					 * p.getHeight()); } } for (int i = 0; i < clown.getRightStack().size(); i++) {
+					 * Shape p = clown.getRightStack().get(i); if (i == 0) { p.setY(clown.getY() -
+					 * p.getHeight()); } else { p.setY(clown.getRightStack().get(i - 1).getY() -
+					 * p.getHeight()); } }
+					 */
+					int before = controlable.size();
+					controlable.clear();
+					controlable.add(clown);
+					for (int i = 0; i < clown.getLeftStack().size(); i++) {
+						clown.getLeftStack().get(i).setX(clown.getX());
+						controlable.add(clown.getLeftStack().get(i));
+					}
+					for (int i = 0; i < clown.getRightStack().size(); i++) {
+						clown.getRightStack().get(i).setX(clown.getX() + 100);
+						controlable.add(clown.getRightStack().get(i));
+					}
+					score += (before - controlable.size()) / 3;
+					if (o.getY() == height) {
+						shapesPool.release(o);
+					}
+					iterator.next();
 				}
-				for (int i = 0; i < clown.getRightStack().size(); i++) {
-					clown.getRightStack().get(i).setX(clown.getX() + 100);
-					controlable.add(clown.getRightStack().get(i));
-				}
-				score += (before - controlable.size()) / 3;
-				if (o.getY() == height) {
-					shapesPool.release(o);
-				}
-				iterator.next();
 			}
 		}
 		return true;
