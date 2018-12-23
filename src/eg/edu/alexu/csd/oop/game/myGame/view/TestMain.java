@@ -19,6 +19,7 @@ import eg.edu.alexu.csd.oop.game.myGame.controller.memento.Memento;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Easy;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Moderate;
 import eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates;
+import eg.edu.alexu.csd.oop.game.myGame.model.Sound;
 import eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory;
 
 public class TestMain {
@@ -29,6 +30,8 @@ public class TestMain {
 	
 	
 	public static void main(String[] args) {
+		Thread sound = new Sound();
+		sound.start();
 		circus = new CircusOfPlates(1500, 800);
 		Loader platesLoader = new PlatesLoader(ShapesFactory.getInstance(1500));
 		File file = new File("./src/eg/edu/alexu/csd/oop/game/myGame/model/shapes");
