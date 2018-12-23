@@ -896,3 +896,357 @@
 2018-12-23 23:29:02,364  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
 2018-12-23 23:29:02,586  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
 2018-12-23 23:29:02,591  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:28,982  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:46:29,374  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:46:29,434  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:46:29,440  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:29,485  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:46:29,486  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:29,538  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:46:29,799  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:29,799  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:46:29,799  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:46:29,803  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:30,306  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:30,306  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:46:30,306  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:46:30,306  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:30,624  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:30,628  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:46:30,628  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:46:30,628  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:30,959  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:30,959  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:46:30,959  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:46:30,959  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:31,246  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:31,246  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:46:31,246  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:46:31,246  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:31,531  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:31,535  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:46:31,535  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:46:31,535  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:31,823  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:31,823  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:46:31,823  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:46:31,823  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:32,260  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:32,260  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:46:32,260  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:46:32,260  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:46:32,529  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:46:32,541  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:32,802  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:46:32,814  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:33,082  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:46:33,094  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:46:33,355  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.addToStack 81 - Adding to left stack
+2018-12-23 23:46:33,365  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:46:33,377  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:21,385  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:48:21,689  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:48:21,701  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:48:21,705  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:21,733  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:48:21,737  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:21,765  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:48:21,975  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:21,975  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:48:21,975  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:48:21,975  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:22,814  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:22,814  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:48:22,814  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:48:22,814  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:23,103  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:23,107  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:48:23,107  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:48:23,107  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:23,393  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:23,393  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:48:23,393  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:48:23,393  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:23,689  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:23,689  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:48:23,689  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:48:23,689  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:24,010  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:24,010  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:48:24,010  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:48:24,011  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:24,865  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:24,865  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:48:24,865  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:48:24,865  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:25,150  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:25,150  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:48:25,154  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:48:25,154  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:48:25,438  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:48:25,451  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:25,703  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:48:25,715  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:25,969  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:48:25,977  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:48:26,230  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:48:26,244  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:06,615  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:50:06,901  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:50:06,913  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:50:06,917  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:06,942  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:50:06,946  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:06,976  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:50:07,185  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:07,185  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:07,185  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:07,185  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:07,601  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:07,601  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:07,603  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:07,603  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:07,907  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:07,911  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:07,915  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:07,915  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:08,217  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:08,217  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:08,217  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:08,217  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:08,505  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:08,505  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:08,505  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:08,505  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:08,807  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:08,807  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:08,807  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:08,807  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:09,101  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:09,101  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:09,101  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:09,101  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:09,389  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:09,389  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:09,389  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:09,389  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:09,673  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:09,681  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:09,939  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:09,951  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:10,201  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:10,213  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:18,431  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:50:18,713  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:50:18,725  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:50:18,733  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:18,762  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:50:18,762  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:18,790  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:50:19,017  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:19,017  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:19,017  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:19,017  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:19,434  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:19,434  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:19,434  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:19,434  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:19,725  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:19,729  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:19,729  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:19,729  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:20,021  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:20,021  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:20,021  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:20,021  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:20,306  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:20,306  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:20,306  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:20,306  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:20,595  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:20,595  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:20,598  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:20,598  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:20,887  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:20,891  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:20,891  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:20,891  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:21,177  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:21,177  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:21,177  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:21,177  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:21,461  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:21,469  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:21,509  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.addToStack 81 - Adding to left stack
+2018-12-23 23:50:21,717  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:21,727  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:21,995  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:21,995  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:21,995  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:21,995  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:22,287  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:22,287  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:50:22,287  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:50:22,287  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:50:22,319  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:22,578  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:22,586  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:22,849  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:22,857  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:23,141  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:23,153  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:50:23,417  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:50:23,433  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:52:11,386  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:52:11,679  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:52:11,687  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:55:01,767  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:55:02,056  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:55:02,068  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:55:02,300  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:55:02,300  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:55:02,300  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:55:19,248  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:55:19,537  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:55:19,553  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:55:19,767  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:55:19,767  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:55:19,767  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:08,675  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:57:08,960  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:57:08,972  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:57:08,976  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:09,006  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:57:09,006  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:09,030  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:57:09,250  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:09,250  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:09,250  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:09,250  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:09,732  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:09,732  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:09,732  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:09,732  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:10,040  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:10,044  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:10,044  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:10,044  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:10,360  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:10,360  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:10,360  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:10,360  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:10,657  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:10,657  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:10,657  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:10,657  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:10,947  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:10,947  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:10,948  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:10,948  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:11,248  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:11,248  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:11,248  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:11,248  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:11,540  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:11,544  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:11,544  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:11,544  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:11,816  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:57:11,828  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:12,120  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:57:12,135  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:12,408  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:57:12,420  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:12,697  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:57:12,711  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:13,043  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:57:13,055  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:26,315  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:57:26,591  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:57:26,603  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:57:26,607  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:26,631  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:57:26,635  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:26,660  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:57:26,878  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:26,878  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:26,878  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:26,878  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:27,321  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:27,321  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:27,322  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:27,322  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:27,627  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:27,627  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:27,627  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:27,631  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:27,926  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:27,926  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:27,930  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:27,930  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:28,218  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:28,218  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:28,218  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:28,218  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:28,519  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:28,522  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:28,522  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:28,523  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:35,043  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.CircusOfPlates.<init> 37 - Initiating circus of plates
+2018-12-23 23:57:35,352  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.<init> 23 - Instantiating a clown
+2018-12-23 23:57:35,368  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:57:35,368  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:35,397  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.TestMain.loadPlugin 25 - Trying to load Shape Classes
+2018-12-23 23:57:35,401  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:35,442  INFO [main] - eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard.<init> 13 - Initiate hard strategy
+2018-12-23 23:57:35,654  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:35,658  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:35,658  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:35,658  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:36,423  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:36,427  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:36,427  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:36,427  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:36,721  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:36,721  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:36,721  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:36,721  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:37,036  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:37,036  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:37,036  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:37,036  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:37,324  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:37,324  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:37,324  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:37,324  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:37,611  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:37,615  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:37,615  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:37,615  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:37,877  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.addToStack 81 - Adding to left stack
+2018-12-23 23:57:37,897  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:37,897  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:37,897  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:37,897  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:38,177  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:38,177  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:38,177  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:38,177  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:38,467  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:38,467  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:38,467  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:38,467  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:38,535  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.addToStack 85 - Adding to right stack
+2018-12-23 23:57:38,763  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:38,763  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:38,763  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:38,767  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:38,791  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:57:38,975  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.Clown.addToStack 85 - Adding to right stack
+2018-12-23 23:57:39,081  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:39,366  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
+2018-12-23 23:57:39,366  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ShapesPool.create 36 - pool creating a new shape
+2018-12-23 23:57:39,366  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.factory.ShapesFactory.makeShape 30 - Making shape from factory
+2018-12-23 23:57:39,366  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.view.Images.loadImages 29 - Loading Images
+2018-12-23 23:57:39,390  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.release 53 - releasing from pool
+2018-12-23 23:57:39,658  INFO [AWT-EventQueue-0] - eg.edu.alexu.csd.oop.game.myGame.model.platesPool.ObjectPool.acquire 23 - Acquiring from pool
