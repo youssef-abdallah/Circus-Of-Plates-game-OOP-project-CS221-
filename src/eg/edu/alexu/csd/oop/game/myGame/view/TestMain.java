@@ -8,8 +8,6 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import org.apache.log4j.Logger;
-
 import eg.edu.alexu.csd.oop.game.GameEngine;
 import eg.edu.alexu.csd.oop.game.GameEngine.GameController;
 import eg.edu.alexu.csd.oop.game.myGame.controller.startegy.Hard;
@@ -44,8 +42,6 @@ public class TestMain {
 		new Hard(circus);
 		menuBar = new JMenuBar();
 		JMenu menu = new JMenu("File");
-		JMenuItem pauseMenuItem = new JMenuItem("Pause");
-		JMenuItem resumeMenuItem = new JMenuItem("Resume");
 		JMenuItem saveMenuItem = new JMenuItem("Save");
 		JMenuItem loadMenuItem = new JMenuItem("Load");
 		JMenu difficultySubmenu = new JMenu("Choose difficulty");
@@ -56,23 +52,11 @@ public class TestMain {
 		difficultySubmenu.add(moderate);
 		difficultySubmenu.add(hard);
 		menu.addSeparator();
-		menu.add(pauseMenuItem);
-		menu.add(resumeMenuItem);
 		menu.add(saveMenuItem);
 		menu.add(loadMenuItem);
 		menu.add(difficultySubmenu);
 		menuBar.add(menu);
 		gameController = GameEngine.start("test", circus, menuBar, Color.BLACK);
-		pauseMenuItem.addActionListener(new ActionListener() {
-		@Override public void actionPerformed(ActionEvent e) {
-				gameController.pause();
-			}
-		});
-		resumeMenuItem.addActionListener(new ActionListener() {
-			@Override public void actionPerformed(ActionEvent e) {
-				gameController.resume();
-			}
-		});
 		easy.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

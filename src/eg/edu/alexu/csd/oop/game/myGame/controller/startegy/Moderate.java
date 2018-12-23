@@ -17,6 +17,6 @@ public class Moderate implements Difficulty {
 
 	@Override
 	public void setDifficulty() {
-		world.setSpeed(3);
+		world.setSpeed(2);
 	}
 }
