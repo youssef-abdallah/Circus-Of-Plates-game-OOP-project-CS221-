@@ -12,7 +12,7 @@ public class Sound extends Thread{
 
 	public void run() {
 		try {
-			File musicPath = new File(".//res//music.wav");
+			File musicPath = new File(".//res//videoplayback.wav");
 			if(musicPath.exists()) {
 				AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
 				Clip clip = AudioSystem.getClip();
