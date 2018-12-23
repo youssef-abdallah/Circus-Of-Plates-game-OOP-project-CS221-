@@ -1,7 +1,11 @@
 package eg.edu.alexu.csd.oop.game.myGame.model;
 
+import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
+
+import javax.imageio.ImageIO;
+
 import org.apache.log4j.Logger;
 import eg.edu.alexu.csd.oop.game.GameObject;
 import eg.edu.alexu.csd.oop.game.World;
@@ -35,8 +39,8 @@ public class CircusOfPlates implements World, Originator, Cloneable {
 		log.info("Initiating circus of plates");
 		width = screenWidth;
 		height = screenHeight;
-		// GameObject background = new Background(0,0,"/download.jpg");
-		// constant.add(background);
+		Background background = new Background("background.png");
+		constant.add(background);
 		clown = new Clown((screenWidth / 2) - 75, (int) (screenHeight) - 155, "/player1.png");
 		controlable.add(clown);
 		Observable observer = new PlateObserver();
