@@ -85,9 +85,9 @@ public class Ball extends Shape{
 	}
 	
 	@Override
-	public Plate clone() {
-		Plate plate = new Plate(this.getX(), this.getY());
-		return plate;
+	public Ball clone() {
+		Ball ball = new Ball(this.getX(), this.getY());
+		return ball;
 	}
 
 }
